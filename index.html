@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="PayBoxx" />
+  <title>PayBOXX</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" media="screen">
+  <!-- Open Graph / Scheme -->
+  <meta property="og:title" content="PayBOXX" />
+  <meta name="author" content="DEVCØN, 2INfINITy" />
+  <meta property="og:locale" content="en" />
+  <link rel="canonical" href="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="PayBOXX" />
+  <meta property="og:image" content="" />
+  <meta property="og:alt" content="PayBOXX" />
+  <meta property="og:description" content="PayBoxx" />
+  <script type="application/ld+json">
+          {
+            "name": "PayBOXX",
+            "description": null,
+            "author": {
+              "@type": "Person",
+              "name": "DEVCØN, 2INfINITy"
+            },
+            "@type": "WebSite",
+            "url": "",
+            "publisher": null,
+            "image": null,
+            "headline": "PayBOXX",
+            "dateModified": null,
+            "datePublished": null,
+            "sameAs": null,
+            "mainEntityOfPage": null,
+            "@context": "http://schema.org"
+          }
+        </script>
+</head>
+
+<body>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10 my-4">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="card-title">Pay<span class="yellowtext">B</span><span class="bluetext">O</span><span
+                class="greentext">XX</span></h1>
+            <p class="card-text small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic
+              voluptatem odit ea exercitationem repudiandae consectetur!</p>
+          </div>
+          <div class="card-body">
+            <ul class="nav nav-pills nav-fill mb-3">
+              <li class="nav-item mr-2"><a onclick="setCurrentTab('bcz');" class="nav-link green active" href="#bcz"
+                  data-toggle="tab">BCZ</a></li>
+              <li class="nav-item mr-2"><a onclick="setCurrentTab('gxx');" class="nav-link yellow" href="#gxx"
+                  data-toggle="tab">GXX</a></li>
+              <li class="nav-item"><a onclick="setCurrentTab('bzx');" class="nav-link blue" href="#bzx"
+                  data-toggle="tab">BZX</a></li>
+            </ul>
+            <div class="tab-content">
+
+              <!-- BZX -->
+              <div class="tab-pane tab-content" id="bzx">
+                <form id="bzxForm">
+                  <div class="form-row">
+                    <div class="form-group col-10">
+                      <label for="redeemFrombzx">BZX Private Key <a href="#" data-toggle="tooltip"
+                          title="Fill in your BZX privatekey and click on load."><i
+                            class="far fa-question-circle gray ml-1"></i></a></label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text blue"><i class="fas fa-key"></i>
+                          </div>
+                        </div>
+                        <input type="password" class="form-control" id="redeemFrombzx" placeholder=""
+                          autocomplete="foo">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary blue" type="button" id="redeemFromBtnbzx">Load</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-2 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button class="btn btn-primary blue" type="button" id="newWalletbzx" data-toggle="modal"
+                          data-target="#modalNewAddressBZX">New</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="hidden alert alert-danger" id="redeemFromStatusbzx" role="alert"></div>
+                    <table class="table table-sm table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="text-muted" style="width: 75px">Address:</td>
+                          <td class="bluetext" id="walletAddressbzx"></td>
+                        </tr>
+                        <tr>
+                          <td class="text-muted">Balance:</td>
+                          <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of spendable funds.</small>
+                  </div>
+                  <div class="output">
+                    <div class="form-row" id="walletSpendTobzx">
+                      <div class="form-group col-8">
+                        <label for="addressTobzx">BZX Destination address <a href="#" data-toggle="tooltip"
+                            title="Fill in the BZX address where you wish to send funds to"><i
+                              class="far fa-question-circle gray ml-1"></i></a></label>
+                        <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text blue"><i class="fas fa-share"></i></div>
+                          </div>
+                          <input type="text" id="addressTobzx" class="form-control addressTo" placeholder="">
+                        </div>
+                        <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
+                          BZX address.</small>
+                      </div>
+                      <div class="form-group col-4 text-right">
+                        <label for="amountTosendbzx">Amount <a href="#" data-toggle="tooltip"
+                            title="Fill in the amount you wish to send."><i
+                              class="far fa-question-circle gray ml-1 "></i></a></label>
+                        <div class="input-group mb-2">
+                          <input type="text" id="amountTosendbzx" class="form-control amount" placeholder="">
+                          <div class="input-group-append">
+                            <span class="input-group-text blue">BZX</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-8 mb-0">
+                      <label for="formGroupFee">Fee</label>
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="txFeebzx" placeholder="0.001" value="0.001">
+                        <div class="input-group-append">
+                          <div class="input-group-text blue">BZX</div>
+                        </div>
+                      </div>
+                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 BZX.</small>
+                    </div>
+                    <div class="form-group col-4 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button type="button" id="walletSendBtnbzx" class="btn btn-primary blue">Send</button>
+                        <button type="button" class="btn btn-primary blue" onclick="resetBZX()">Reset</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="walletSendStatusbzx" class="alert alert-danger hidden mt-3 mb-0" role="alert"></div>
+                </form>
+              </div>
+
+              <!-- GXX -->
+              <div class="tab-pane tab-content" id="gxx">
+                <form id="gxxForm">
+                  <div class="form-row">
+                    <div class="form-group col-10">
+                      <label for="redeemFrom">GXX Private Key <a href="#" data-toggle="tooltip"
+                          title="Fill in your GXX privatekey and click on load."><i
+                            class="far fa-question-circle gray ml-1"></i></a></label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text yellow"><i class="fas fa-key"></i>
+                          </div>
+                        </div>
+                        <input type="password" class="form-control" id="redeemFromgxx" placeholder=""
+                          autocomplete="foo">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary yellow" type="button" id="redeemFromBtngxx">Load</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-2 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button class="btn btn-primary yellow" type="button" id="newWalletgxx" data-toggle="modal"
+                          data-target="#modalNewAddressGXX">New</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="hidden alert alert-danger" id="redeemFromStatusgxx" role="alert"></div>
+                    <table class="table table-sm table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="text-muted" style="width: 75px">Address:</td>
+                          <td class="yellowtext" id="walletAddressgxx"></td>
+                        </tr>
+                        <tr>
+                          <td class="text-muted">Balance:</td>
+                          <td class="yellowtext" id="walletBalancegxx"> 0 GXX</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of spendable funds.</small>
+                  </div>
+                  <div class="output">
+                    <div class="form-row" id="walletSpendTogxx">
+                      <div class="form-group col-8">
+                        <label for="addressTogxx">GXX Destination address <a href="#" data-toggle="tooltip"
+                            title="Fill in the GXX address where you wish to send funds to"><i
+                              class="far fa-question-circle gray ml-1"></i></a></label>
+                        <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text yellow"><i class="fas fa-share"></i></div>
+                          </div>
+                          <input type="text" id="addressTogxx" class="form-control addressTo" placeholder="">
+                        </div>
+                        <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
+                          GXX address.</small>
+                      </div>
+                      <div class="form-group col-4 text-right">
+                        <label for="amountTosendgxx">Amount <a href="#" data-toggle="tooltip"
+                            title="Fill in the amount you wish to send."><i
+                              class="far fa-question-circle gray ml-1 "></i></a></label>
+                        <div class="input-group mb-2">
+                          <input type="text" id="amountTosendgxx" class="form-control amount" placeholder="">
+                          <div class="input-group-append">
+                            <span class="input-group-text yellow">GXX</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-8 mb-0">
+                      <label for="formGroupFee">Fee</label>
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="txFeegxx" placeholder="0.001" value="0.001">
+                        <div class="input-group-append">
+                          <div class="input-group-text yellow">GXX</div>
+                        </div>
+                      </div>
+                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 GXX.</small>
+                    </div>
+                    <div class="form-group col-4 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button type="button" id="walletSendBtngxx" class="btn btn-primary yellow">Send</button>
+                        <button type="button" class="btn btn-primary yellow" onclick="resetGXX()">Reset</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="walletSendStatusgxx" class="alert alert-danger hidden mt-3 mb-0" role="alert"></div>
+                </form>
+              </div>
+
+              <!-- BCZ -->
+              <div class="tab-pane tab-content active" id="bcz">
+                <form id="bczForm">
+                  <div class="form-row">
+                    <div class="form-group col-10">
+                      <label for="redeemFrom">BCZ Private Key <a href="#" data-toggle="tooltip"
+                          title="Fill in your BCZ privatekey and click on load."><i
+                            class="far fa-question-circle gray ml-1"></i></a></label>
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text green"><i class="fas fa-key"></i>
+                          </div>
+                        </div>
+                        <input type="password" class="form-control" id="redeemFrombcz" placeholder=""
+                          autocomplete="foo">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary green" type="button" id="redeemFromBtnbcz">Load</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-2 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button class="btn btn-primary green" type="button" id="newWalletbcz" data-toggle="modal"
+                          data-target="#modalNewAddressBCZ">New</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="hidden alert alert-danger" id="redeemFromStatusbcz" role="alert"></div>
+                    <table class="table table-sm table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="text-muted" style="width: 75px">Address:</td>
+                          <td class="greentext" id="walletAddressbcz"></td>
+                        </tr>
+                        <tr>
+                          <td class="text-muted">Balance:</td>
+                          <td class="greentext" id="walletBalancebcz"> 0 BCZ</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of spendable funds.</small>
+                  </div>
+                  <div class="output">
+                    <div class="form-row" id="walletSpendTobcz">
+                      <div class="form-group col-8">
+                        <label for="addressTobcz">BCZ Destination address <a href="#" data-toggle="tooltip"
+                            title="Fill in the BCZ address where you wish to send funds to"><i
+                              class="far fa-question-circle gray ml-1"></i></a></label>
+                        <div class="input-group mb-2">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text green"><i class="fas fa-share"></i></div>
+                          </div>
+                          <input type="text" id="addressTobcz" class="form-control addressTo" placeholder="">
+                        </div>
+                        <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
+                          BCZ address.</small>
+                      </div>
+                      <div class="form-group col-4 text-right">
+                        <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip"
+                            title="Fill in the amount you wish to send."><i
+                              class="far fa-question-circle gray ml-1 "></i></a></label>
+                        <div class="input-group mb-2">
+                          <input type="text" id="amountTosendbcz" class="form-control amount" placeholder="">
+                          <div class="input-group-append">
+                            <span class="input-group-text green">BCZ</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-8  mb-0">
+                      <label for="formGroupFee">Fee</label>
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="txFeebcz" placeholder="0.0001" value="0.0001"
+                          disabled>
+                        <div class="input-group-append">
+                          <div class="input-group-text green">BCZ</div>
+                        </div>
+                      </div>
+                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.0001 BCZ.</small>
+                    </div>
+                    <div class="form-group col-4 text-right">
+                      <label>&nbsp;</label>
+                      <div class="buttons">
+                        <button type="button" id="walletSendBtnbcz" class="btn btn-primary green">Send</button>
+                        <button type="button" class="btn btn-primary green" onclick="resetBCZ()">Reset</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="walletSendStatusbcz" class="alert alert-danger hidden mt-3 mb-0" role="alert"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <p class="card-text small text-muted">
+              This page uses javascript to generate your addresses and sign your transactions within your browser.
+              PayBOXX
+              does not store your keys or any data. We cannot access wallets, private keys, seeds nor reverse any
+              transactions. Protect your keys & always check that you are on the correct URL.
+              You are responsible for your own security!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 my-4">
+        <div class="card">
+          <div class="card-header">
+            <h4>Userguide for dummies</h4>
+            <p class="card-text small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic!</p>
+          </div>
+          <div class="card-body">
+            <p class="card-text small text-muted"><strong>Lorem ipsum dolor</strong></p>
+            <ul class="small text-muted">
+              <li>sit amet consectetur adipisicing elit</li>
+              <li>sit amet consectetur adipisicing elit</li>
+              <li>sit amet consectetur adipisicing elit</li>
+              <li>sit amet consectetur adipisicing elit</li>
+            </ul>
+            <p class="card-text small text-muted"> Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic
+              voluptatem odit ea exercitationem repudiandae consectetur!
+            </p>
+
+            <p class="card-text small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic
+              voluptatem odit ea exercitationem repudiandae consectetur!</p>
+
+            <p class="card-text small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic
+              voluptatem odit ea exercitationem repudiandae consectetur!</p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text small text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              dolore dolor culpa nostrum odio eaque blanditiis ipsam, sit ipsa, sint deserunt perferendis nobis hic
+              voluptatem odit ea exercitationem repudiandae consectetur!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- wallet confirm send modal BZX -->
+  <div class="modal fade" id="modalWalletConfirmbzx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Please confirm</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You are about to send a transaction to <span id="spendAddressbzx"></span> with the value of <span
+              id="spendAmountbzx">0.00</span> BZX</p>
+          <div id="walletSendConfirmStatusbzx" class="alert alert-danger hidden" role="alert"></div>
+          <div id="walletSendFailTransactionbzx" class="alert alert-info hidden" role="alert">
+            <b>Raw Transaction:</b>
+            <p>Below is a copy of the transaction we tried to submit</p>
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" readonly></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary blue" id="walletConfirmSendbzx">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet confirm send modal BZX -->
+
+  <!-- wallet confirm send modal GXX -->
+  <div class="modal fade" id="modalWalletConfirmgxx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Please confirm</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You are about to send a transaction to <span id="spendAddressgxx"></span> with the value of <span
+              id="spendAmountgxx">0.00</span> GXX</p>
+          <div id="walletSendConfirmStatusgxx" class="alert alert-danger hidden" role="alert"></div>
+          <div id="walletSendFailTransactiongxx" class="alert alert-info hidden" role="alert">
+            <b>Raw Transaction:</b>
+            <p>Below is a copy of the transaction we tried to submit</p>
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" readonly></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary yellow" id="walletConfirmSendgxx">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet confirm send modal GXX -->
+
+  <!-- wallet confirm send modal BCZ -->
+  <div class="modal fade" id="modalWalletConfirmbcz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Please confirm</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You are about to send a transaction to <span id="spendAddressbcz"></span> with the value of <span
+              id="spendAmountbcz">0.00</span> BCZ</p>
+          <div id="walletSendConfirmStatusbcz" class="alert alert-danger hidden" role="alert"></div>
+          <div id="walletSendFailTransactionbcz" class="alert alert-info hidden" role="alert">
+            <b>Raw Transaction:</b>
+            <p>Below is a copy of the transaction we tried to submit</p>
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" readonly></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary green" id="walletConfirmSendbcz">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet confirm send modal BCZ -->
+
+  <!-- wallet New Address BZX -->
+  <div class="modal fade" id="modalNewAddressBZX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Create New BZX Wallet</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-body-bzx text-muted">
+          <p>Any keys used you will need to manually store safely as they will be needed later to redeem your BZX.</p>
+          <form>
+            <div class="form-group">
+              <label>Address (Share)</label>
+              <div class="input-group">
+                <input id="newAddressbzx" type="text" class="form-control" value="" readonly />
+                <div class="input-group-append">
+                  <button class="qrcodeBtn btn btn-primary blue" type="button" data-toggle="modal"
+                    data-target="#modalQrcode"><i class="fas fa-qrcode"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Public key (Share)</label>
+              <input id="newPubKeybzx" type="text" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label>Private key (WIF key)</label>
+              <div class="input-group">
+                <input id="newPrivKeybzx" type="password" class="form-control" value="" readonly>
+                <div class="input-group-append">
+                  <button class="showKey btn btn-primary blue" type="button"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div id="aes256wifkey" class="hidden">
+                <label>AES-256 Encrypted WIF key</label>
+                <input id="newPrivKeyEncbzx" type="text" class="form-control" value="" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary blue" value="Generate" id="newKeysBtnbzx">Generate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet New Address BZX-->
+
+  <!-- wallet New Address GXX -->
+  <div class="modal fade" id="modalNewAddressGXX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Create New GXX Wallet</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-body-gxx text-muted">
+          <p>Any keys used you will need to manually store safely as they will be needed later to redeem your GXX.</p>
+          <form>
+            <div class="form-group">
+              <label>Address (Share)</label>
+              <div class="input-group">
+                <input id="newAddressgxx" type="text" class="form-control" value="" readonly>
+                <div class="input-group-append">
+                  <button class="qrcodeBtn btn btn-primary yellow" type="button" data-toggle="modal"
+                    data-target="#modalQrcode"><i class="fas fa-qrcode"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Public key (Share)</label>
+              <input id="newPubKeygxx" type="text" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label>Private key (WIF key)</label>
+              <div class="input-group">
+                <input id="newPrivKeygxx" type="password" class="form-control" value="" readonly>
+                <div class="input-group-append">
+                  <button class="showKey btn btn-primary yellow" type="button"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div id="aes256wifkey" class="hidden">
+                <label>AES-256 Encrypted WIF key</label>
+                <input id="newPrivKeyEncgxx" type="text" class="form-control" value="" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary yellow" value="Generate" id="newKeysBtngxx">Generate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet New Address GXX -->
+
+  <!-- wallet New Address BCZ -->
+  <div class="modal fade" id="modalNewAddressBCZ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Create New BCZ Wallet</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-body-bcz text-muted">
+          <p>Any keys used you will need to manually store safely as they will be needed later to redeem your BCZ.
+          </p>
+          <form>
+            <div class="form-group">
+              <label>Address (Share)</label>
+              <div class="input-group">
+                <input id="newAddressbcz" type="text" class="form-control address" value="" readonly>
+                <div class="input-group-append">
+                  <button class="qrcodeBtn btn btn-primary green" type="button" data-toggle="modal"
+                    data-target="#modalQrcode"><i class="fas fa-qrcode"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Public key (Share)</label>
+              <input id="newPubKeybcz" type="text" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+              <label>Private key (WIF key)</label>
+              <div class="input-group">
+                <input id="newPrivKeybcz" type="password" class="form-control" value="" readonly>
+                <div class="input-group-append">
+                  <button class="showKey btn btn-primary green" type="button"><i class="fas fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div id="aes256wifkey" class="hidden">
+                <label>AES-256 Encrypted WIF key</label>
+                <input id="newPrivKeyEncbcz" type="text" class="form-control" value="" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary green" value="Generate" id="newKeysBtnbcz">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wallet New Address BCZ -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- Optional JavaScript -->
+  <script type="text/javascript" src="js/fontawesome.min.js"></script>
+  <script type="text/javascript" src="js/transition.js"></script>
+  <script type="text/javascript" src="js/collapse.js"></script>
+  <script type="text/javascript" src="js/crypto-min.js"></script>
+  <script type="text/javascript" src="js/crypto-sha256.js"></script>
+  <script type="text/javascript" src="js/crypto-sha256-hmac.js"></script>
+  <script type="text/javascript" src="js/sha512.js"></script>
+  <script type="text/javascript" src="js/ripemd160.js"></script>
+  <script type="text/javascript" src="js/aes.js"></script>
+  <script type="text/javascript" src="js/jsbn.js"></script>
+  <script type="text/javascript" src="js/ellipticcurve.js"></script>
+  <!-- Custom JavaScript -->
+  <script type="text/javascript" src="js/boxx.js"></script>
+  <script type="text/javascript" src="js/payboxx.js"></script>
+
+  <script type="text/javascript">
+    var coinID = "bcz";
+    var explorer = "https://" + coinID + ".apixx.ovh/";
+
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    function resetBZX() {
+      document.getElementById("bzxForm").reset();
+    }
+    function resetGXX() {
+      document.getElementById("gxxForm").reset();
+    }
+    function resetBCZ() {
+      document.getElementById("bczForm").reset();
+    }
+  </script>
+
+</body>
+
+</html>
