@@ -177,3 +177,9 @@ ul li a {
 .gray {
   color: #3d404b;
 }
+
+@media (min-width:  575.98px) {
+.card {
+  min-height: 695px;
+}
+}
