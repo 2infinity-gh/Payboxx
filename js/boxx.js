@@ -18,6 +18,8 @@ var boxxjs;
 	
 function setCurrentTab() {}	
 
+    boxxjs.api = 'https://apixx.chaintoolz.com/api';
+
 	/* BZX Parameters */
 	if(coinID == 'bzx'){
 	
@@ -28,7 +30,7 @@ function setCurrentTab() {}
 	boxxjs.hdkey = {'prv':0x0488ade4, 'pub':0x0488b21e};
 	boxxjs.compressed = false;
 	boxxjs.host =  'bitcoinzerox.net';
-	boxxjs.api = 'https://bzx.apixx.ovh/api';
+	
 	}
 	/* GXX Parameters */
     else if(coinID == 'gxx'){
@@ -39,7 +41,7 @@ function setCurrentTab() {}
 	boxxjs.hdkey = {'prv':0x0488ade4, 'pub':0x0488b21e};
 	boxxjs.compressed = false;
 	boxxjs.host =  'gravitycoin.io';
-	boxxjs.api = 'https://gxx.apixx.ovh/api';
+
 	}
 	/* BCZ Parameters */	
 	else if(coinID == 'bcz'){
@@ -50,7 +52,7 @@ function setCurrentTab() {}
 	boxxjs.hdkey = {'prv':0x0488ade4, 'pub':0x0488b21e};
 	boxxjs.compressed = false;
 	boxxjs.host =  'bitcoincz.org';
-	boxxjs.api = 'https://bcz.apixx.ovh/api';
+
 	};	
 
 
@@ -343,7 +345,7 @@ function setCurrentTab() {}
 
 	/* retreive the balance from a given address */
 	boxxjs.addressBalance = function(address, callback){
-		boxxjs.ajax(boxxjs.api+'/ext/?command=bal&address='+address, callback, "GET");
+		boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=bal&a='+address, callback, "GET");
 	}
 
 	/* decompress an compressed public key */
@@ -1052,7 +1054,7 @@ function setCurrentTab() {}
 
 		/* list unspent transactions */
 		r.listUnspent = function(address, callback) {
-			boxxjs.ajax(boxxjs.api+'/ext/?command=unspent&wallet='+address, callback, "GET");
+			boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=unspent&a='+address, callback, "GET");
 		}
 
 		/* add unspent to transaction */
@@ -1119,7 +1121,7 @@ function setCurrentTab() {}
 		/* broadcast a transaction */
 		r.broadcast = function(callback, txhex){
 			var tx = txhex || this.serialize();
-			boxxjs.ajax(boxxjs.api+'/ext/?command=broadcast&tx='+tx, callback, "GET");
+			boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=broadcast&tx='+tx, callback, "GET");
 				
 		}
 

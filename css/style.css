@@ -1,4 +1,6 @@
 /* Global */
+
+
 html,
 body {
   height: 100%;
@@ -27,6 +29,14 @@ ul li a {
 
 .hidden {
   display: none;
+}
+
+
+#qrcode {
+	    width: 300px;
+    height: 300px;
+    padding-top: 20px;
+    background-color: white;
 }
 
 /* Button */

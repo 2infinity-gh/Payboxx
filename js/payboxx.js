@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 setCurrentTab(coinID);
 
-	var explorer = "https://"+coinID+".apixx.ovh/"
+	var explorer = "https://apixx.chaintoolz.com/"
 
     var explorer_api = explorer+"api"
 
@@ -203,7 +203,7 @@ setCurrentTab(coinID);
 
 		tx.addUnspent($("#walletAddressbzx").html(), function(data){
 
-			var dvalue = (data.value/100000000).toFixed(8) * 1;
+			var dvalue = (data.value).toFixed(8) * 1;
 			total = parseFloat(total*1).toFixed(8) * 1;
 
 			if(dvalue>=total){
@@ -280,7 +280,7 @@ setCurrentTab(coinID);
 
 		tx.addUnspent($("#walletAddressgxx").html(), function(data){
 
-			var dvalue = (data.value/100000000).toFixed(8) * 1;
+			var dvalue = (data.value).toFixed(8) * 1;
 			total = parseFloat(total*1).toFixed(8) * 1;
 
 			if(dvalue>=total){
@@ -356,7 +356,7 @@ setCurrentTab(coinID);
 
 		tx.addUnspent($("#walletAddressbcz").html(), function(data){
 
-			var dvalue = (data.value/100000000).toFixed(8) * 1;
+			var dvalue = (data.value).toFixed(8) * 1;
 			total = parseFloat(total*1).toFixed(8) * 1;
 
 			if(dvalue>=total){
@@ -594,7 +594,7 @@ setCurrentTab(coinID);
 	 // console.log(coinID);
 	 $.ajax ({
 		 type: "GET",
-		 url: "https://"+coinID+".apixx.ovh/api/ext/?command=getbalance&wallet="+$("#walletAddress"+coinID).html(),
+		 url: "https://apixx.chaintoolz.com/api/?s="+coinID+"&q=getbalance&a="+$("#walletAddress"+coinID).html(),
 		 dataType: "json",
 		 error: function(data) {
 			 $("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
@@ -617,7 +617,7 @@ setCurrentTab(coinID);
 	function walletApiUncBalance() {
 	 $.ajax ({
 		 type: "GET",
-		url: "https://"+coinID+".apixx.ovh/api/ext/?command=getbalance&wallet="+$("#walletAddress"+coinID).html(),
+		url: "https://apixx.chaintoolz.com/api/?s="+coinID+"&q=getbalance&a="+$("#walletAddress"+coinID).html(),
 		 dataType: "json",
 		 error: function(data) {
 			 $("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
@@ -639,7 +639,7 @@ setCurrentTab(coinID);
 	function getTxConf(txid,cb,cberr){
 		$.ajax ({
 			type: "GET",
-			url: "https://"+coinID+".apixx.ovh/api/ext/?command=getrawtx&tx="+txid,
+			url: "https://apixx.chaintoolz.com/api/?s="+coinID+"&q=getrawtx&tx="+txid,
 			dataType: "json",
 			error: function(data) {
 				cberr();
@@ -657,7 +657,7 @@ setCurrentTab(coinID);
 	function getAddressTx(cb, cberr){
 		$.ajax ({
 			type: "GET",
-			url: "https://"+coinID+".apixx.ovh/api/ext/?command=addr&wallet="+$("#walletAddress"+coinID).html(),
+			url: "https://apixx.chaintoolz.com/api/?s="+coinID+"&q=addr&a="+$("#walletAddress"+coinID).html(),
 			dataType: "json",
 			error: function(data) {
 				cberr();
@@ -1618,7 +1618,7 @@ setCurrentTab(coinID);
 		input_count = 0;
 		$.ajax ({
 			type: "GET",
-			url: "https://"+coinID+".apixx.ovh/api/ext/?command=listunspent&wallet="+redeem.addr,
+			url: "https://apixx.chaintoolz.com/api/?s="+coinID+"&q=listunspent&a="+redeem.addr,
 			dataType: "json",
 			error: function(data) {
 				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
@@ -2166,7 +2166,7 @@ setCurrentTab(coinID);
 			}
 		} else {
 			var qrcode = new QRCode("qrcode");
-			qrstr = coinID+":"+$('.address',thisbtn).val();
+			qrstr = coinID+":"+$('#newAddress'+coinID,thisbtn).val();
 		}
 
 		if(qrstr){
