@@ -529,6 +529,10 @@
             <div class="form-group">
               <label>Address (Share)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newAddressbzx" class="btn btn-primary blue" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newAddressbzx" type="text" class="form-control" value="" readonly />
                 <div class="input-group-append">
                   <button class="qrcodeBtn btn btn-primary blue" type="button" data-toggle="modal"
@@ -538,11 +542,21 @@
             </div>
             <div class="form-group">
               <label>Public key (Share)</label>
-              <input id="newPubKeybzx" type="text" class="form-control" readonly>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPubKeybzx" class="btn btn-primary blue" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
+                <input id="newPubKeybzx" type="text" class="form-control" readonly>
+              </div>
             </div>
             <div class="form-group">
               <label>Private key (WIF key)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPrivKeybzx" class="btn btn-primary blue" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newPrivKeybzx" type="password" class="form-control" value="" readonly>
                 <input id="aes256passbzx" type="hidden" class="form-control" value="" readonly>
                 <div class="input-group-append">
@@ -583,6 +597,10 @@
             <div class="form-group">
               <label>Address (Share)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newAddressgxx" class="btn btn-primary yellow" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newAddressgxx" type="text" class="form-control" value="" readonly>
                 <div class="input-group-append">
                   <button class="qrcodeBtn btn btn-primary yellow" type="button" data-toggle="modal"
@@ -592,11 +610,21 @@
             </div>
             <div class="form-group">
               <label>Public key (Share)</label>
-              <input id="newPubKeygxx" type="text" class="form-control" readonly>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPubKeygxx" class="btn btn-primary yellow" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
+                <input id="newPubKeygxx" type="text" class="form-control" readonly>
+              </div>
             </div>
             <div class="form-group">
               <label>Private key (WIF key)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPrivKeygxx" class="btn btn-primary yellow" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newPrivKeygxx" type="password" class="form-control" value="" readonly>
                 <input id="aes256passgxx" type="hidden" class="form-control" value="" readonly>
                 <div class="input-group-append">
@@ -638,6 +666,10 @@
             <div class="form-group">
               <label>Address (Share)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newAddressbcz" class="btn btn-primary green" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newAddressbcz" type="text" class="form-control address" value="" readonly>
                 <div class="input-group-append">
                   <button class="qrcodeBtn btn btn-primary green" type="button" data-toggle="modal"
@@ -647,11 +679,21 @@
             </div>
             <div class="form-group">
               <label>Public key (Share)</label>
-              <input id="newPubKeybcz" type="text" class="form-control" readonly>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPubKeybcz" class="btn btn-primary green" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
+                <input id="newPubKeybcz" type="text" class="form-control" readonly>
+              </div>
             </div>
             <div class="form-group">
               <label>Private key (WIF key)</label>
               <div class="input-group">
+                <div class="input-group-prepend">
+                  <button data-clipboard-target="#newPrivKeybcz" class="btn btn-primary green" type="button"><i
+                      class="fas fa-copy"></i></button>
+                </div>
                 <input id="newPrivKeybcz" type="password" class="form-control" value="" readonly>
                 <input id="aes256passbcz" type="hidden" class="form-control" value="" readonly>
                 <div class="input-group-append">
@@ -719,6 +761,8 @@
   <script type="text/javascript" src="js/qrcode.js"></script>
   <script type="text/javascript" src="js/jsbn.js"></script>
   <script type="text/javascript" src="js/ellipticcurve.js"></script>
+  <script type="text/javascript" src="js/clipboard.min.js"></script>
+
   <!-- Custom JavaScript -->
   <script type="text/javascript" src="js/boxx.js"></script>
   <script type="text/javascript" src="js/payboxx.js"></script>
@@ -740,6 +784,8 @@
     function resetBCZ() {
       document.getElementById("bczForm").reset();
     }
+
+    new ClipboardJS('.btn');
   </script>
 
 </body>
