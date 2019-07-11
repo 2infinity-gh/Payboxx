@@ -168,6 +168,61 @@ setCurrentTab(coinID);
 		walletApiUncBalance();
 	});
 
+////////////////  BZX Paperwallet ////////////////////
+
+	$("#newPaperwalletBtnbzx").click(function(){
+		if($("#newAddressbzx").val()==""){
+			$("#newKeysBtnbzx").click();
+		}
+
+		var paperwallet = window.open();
+		paperwallet.document.write('<h2>BZX PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbzx"></div><p>'+$("#newAddressbzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybzx"></div><p>'+$("#newPubKeybzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybzx"></div><p>'+$("#newPrivKeybzx").val()+'</p></div></div>');
+		paperwallet.document.close();
+		paperwallet.focus();
+		new QRCode(paperwallet.document.getElementById("qraddressbzx"), {text: $("#newAddressbzx").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrpubkeybzx"), {text: $("#newPubKeybzx").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrprivkeybzx"), {text: $("#newPrivKeybzx").val(), width: 125, height: 125});
+		paperwallet.print();
+		paperwallet.close();
+	});
+	
+///////////////// GXX Paperwallet ///////////////////	
+	
+	$("#newPaperwalletBtngxx").click(function(){
+		if($("#newAddressgxx").val()==""){
+			$("#newKeysBtngxx").click();
+		}
+
+		var paperwallet = window.open();
+		paperwallet.document.write('<h2>GXX PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressgxx"></div><p>'+$("#newAddressgxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeygxx"></div><p>'+$("#newPubKeygxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeygxx"></div><p>'+$("#newPrivKeygxx").val()+'</p></div></div>');
+		paperwallet.document.close();
+		paperwallet.focus();
+		new QRCode(paperwallet.document.getElementById("qraddressgxx"), {text: $("#newAddressgxx").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrpubkeygxx"), {text: $("#newPubKeygxx").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrprivkeygxx"), {text: $("#newPrivKeygxx").val(), width: 125, height: 125});
+		paperwallet.print();
+		paperwallet.close();
+	});
+	
+///////////////////// BCZ Paperwallet ////////////////	
+	
+	$("#newPaperwalletBtnbcz").click(function(){
+		if($("#newAddressbcz").val()==""){
+			$("#newKeysBtnbcz").click();
+		}
+
+		var paperwallet = window.open();
+		paperwallet.document.write('<h2>BCZ PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbcz"></div><p>'+$("#newAddressbcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybcz"></div><p>'+$("#newPubKeybcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybcz"></div><p>'+$("#newPrivKeybcz").val()+'</p></div></div>');
+		paperwallet.document.close();
+		paperwallet.focus();
+		new QRCode(paperwallet.document.getElementById("qraddressbcz"), {text: $("#newAddressbcz").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrpubkeybcz"), {text: $("#newPubKeybcz").val(), width: 125, height: 125});
+		new QRCode(paperwallet.document.getElementById("qrprivkeybcz"), {text: $("#newPrivKeybcz").val(), width: 125, height: 125});
+		paperwallet.print();
+		paperwallet.close();
+	});
+
+
 
 ///// CONFIRMSEND BZX
 
@@ -323,6 +378,8 @@ setCurrentTab(coinID);
 	});
 
 	///// CONFIRMSEND BCZ
+
+
 
 	$("#walletConfirmSendbcz").click(function(){
 		var thisbtn = $(this);
