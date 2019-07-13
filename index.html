@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description"
     content="PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions" />
-  <title>PayBOXX | Multi (mobile) web wallet for BCZ, GXX and ZZZ</title>
+  <title>PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -65,17 +65,17 @@
               <li class="nav-item mr-2"><a onclick="setCurrentTab('gxx');" class="nav-link yellow" href="#gxx"
                   data-toggle="tab">GXX</a></li>
               <li class="nav-item"><a onclick="setCurrentTab('bzx');" class="nav-link blue" href="#bzx"
-                  data-toggle="tab">ZZZ</a></li>
+                  data-toggle="tab">BZX</a></li>
             </ul>
             <div class="tab-content">
 
-              <!-- ZZZ -->
+              <!-- BZX -->
               <div class="tab-pane tab-content" id="bzx">
                 <form id="bzxForm">
                   <div class="form-row">
                     <div class="form-group col-10">
-                      <label for="redeemFrombzx">ZZZ Private Key <a href="#" data-toggle="tooltip"
-                          title="Fill in your ZZZ privatekey and click on load."><i
+                      <label for="redeemFrombzx">BZX Private Key <a href="#" data-toggle="tooltip"
+                          title="Fill in your BZX privatekey and click on load."><i
                             class="far fa-question-circle gray ml-1"></i></a></label>
                       <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -107,7 +107,7 @@
                         </tr>
                         <tr>
                           <td class="text-muted">Balance:</td>
-                          <td class="bluetext" id="walletBalancebzx"> 0 ZZZ</td>
+                          <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
                         </tr>
                       </tbody>
                     </table>
@@ -116,8 +116,8 @@
                   <div class="output">
                     <div class="form-row" id="walletSpendTobzx">
                       <div class="form-group col-8">
-                        <label for="addressTobzx">ZZZ Destination address <a href="#" data-toggle="tooltip"
-                            title="Fill in the ZZZ address where you wish to send funds to"><i
+                        <label for="addressTobzx">BZX Destination address <a href="#" data-toggle="tooltip"
+                            title="Fill in the BZX address where you wish to send funds to"><i
                               class="far fa-question-circle gray ml-1"></i></a></label>
                         <div class="input-group mb-2">
                           <div class="input-group-prepend">
@@ -126,7 +126,7 @@
                           <input type="text" id="addressTobzx" class="form-control addressTo" placeholder="">
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
-                          ZZZ address.</small>
+                          BZX address.</small>
                       </div>
                       <div class="form-group col-4 text-right">
                         <label for="amountTosendbzx">Amount <a href="#" data-toggle="tooltip"
@@ -135,7 +135,7 @@
                         <div class="input-group mb-2">
                           <input type="text" id="amountTosendbzx" class="form-control amount" placeholder="">
                           <div class="input-group-append">
-                            <span class="input-group-text blue">ZZZ</span>
+                            <span class="input-group-text blue">BZX</span>
                           </div>
                         </div>
                       </div>
@@ -147,10 +147,10 @@
                       <div class="input-group mb-2">
                         <input type="text" class="form-control" id="txFeebzx" placeholder="0.001" value="0.001">
                         <div class="input-group-append">
-                          <div class="input-group-text blue">ZZZ</div>
+                          <div class="input-group-text blue">BZX</div>
                         </div>
                       </div>
-                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 ZZZ.</small>
+                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 BZX.</small>
                     </div>
                     <div class="form-group col-4 text-right">
                       <label>&nbsp;</label>
@@ -413,7 +413,7 @@
     </div>
   </div>
 
-  <!-- wallet confirm send modal ZZZ -->
+  <!-- wallet confirm send modal BZX -->
   <div class="modal fade" id="modalWalletConfirmbzx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -426,7 +426,7 @@
         </div>
         <div class="modal-body">
           <p>You are about to send a transaction to <span id="spendAddressbzx"></span> with the value of <span
-              id="spendAmountbzx">0.00</span> ZZZ</p>
+              id="spendAmountbzx">0.00</span> BZX</p>
           <div id="walletSendConfirmStatusbzx" class="alert alert-danger hidden" role="alert"></div>
           <div id="walletSendFailTransactionbzx" class="alert alert-info hidden" role="alert">
             <b>Raw Transaction:</b>
@@ -444,7 +444,7 @@
       </div>
     </div>
   </div>
-  <!-- wallet confirm send modal ZZZ -->
+  <!-- wallet confirm send modal BZX -->
 
   <!-- wallet confirm send modal GXX -->
   <div class="modal fade" id="modalWalletConfirmgxx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -512,19 +512,19 @@
   </div>
   <!-- wallet confirm send modal BCZ -->
 
-  <!-- wallet New Address ZZZ -->
+  <!-- wallet New Address BZX -->
   <div class="modal fade" id="modalNewAddressBZX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Create New ZZZ Wallet</h4>
+          <h4 class="modal-title">Create New BZX Wallet</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body modal-body-bzx text-muted">
-          <p>Any keys used you will need to manually store safely as they will be needed later to redeem your ZZZ.</p>
+          <p>Any keys used you will need to manually store safely as they will be needed later to redeem your BZX.</p>
           <form>
             <div class="form-group">
               <label>Address (Share)</label>
@@ -574,12 +574,13 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary blue" value="Generate" id="newKeysBtnbzx">Generate</button>
-		  <button type="button" class="btn btn-primary blue" value="Generate" id="newPaperwalletBtnbzx">Paper Wallet</button>
+          <button type="button" class="btn btn-primary blue" value="Generate" id="newPaperwalletBtnbzx"><i
+              class="fas fa-print"></i> Print</button>
         </div>
       </div>
     </div>
   </div>
-  <!-- wallet New Address ZZZ-->
+  <!-- wallet New Address BZX-->
 
   <!-- wallet New Address GXX -->
   <div class="modal fade" id="modalNewAddressGXX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -643,7 +644,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary yellow" value="Generate" id="newKeysBtngxx">Generate</button>
-		  <button type="button" class="btn btn-primary yellow" value="Generate" id="newPaperwalletBtngxx">Paper Wallet</button>
+          <button type="button" class="btn btn-primary yellow" value="Generate" id="newPaperwalletBtngxx"><i
+              class="fas fa-print"></i> Print</button>
         </div>
       </div>
     </div>
@@ -713,13 +715,13 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary green" value="Generate" id="newKeysBtnbcz">Generate</button>
-		  <button type="button" class="btn btn-primary green" value="Generate" id="newPaperwalletBtnbcz">Paper Wallet</button>
+          <button type="button" class="btn btn-primary green" value="Generate" id="newPaperwalletBtnbcz"><i
+              class="fas fa-print"></i> Print</button>
         </div>
       </div>
     </div>
   </div>
   <!-- wallet New Address BCZ -->
-
 
   <!-- qrcode modal -->
   <div class="modal fade" id="modalQrcode" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -744,8 +746,6 @@
     </div>
   </div>
   <!-- qrcode modal -->
-
-
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

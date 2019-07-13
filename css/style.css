@@ -189,7 +189,7 @@ ul li a {
 }
 
 @media (min-width:  575.98px) {
-.card {
-  min-height: 695px;
-}
+  .card {
+    min-height: 777px;
+  }
 }
