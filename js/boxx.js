@@ -1,14 +1,12 @@
 /*
- Payjs 1.0  by 2infinity.nl{at}gmail.com
+ Boxxjs 1.0  by 2infinity
  A XXX framework.
-
- http://github.com/2infinity-gh/webwallet-bzx or http://apixx.ovh
+ https://payboxx.io
 */
 var boxxjs;
 
  function setCurrentTab(tab){
     coinID = tab;
-	explorer = "https://"+coinID+".apixx.ovh/";
 	
 	boxxjs = window.boxxjs = function () { };
   //alert(tab); 
@@ -18,7 +16,7 @@ var boxxjs;
 	
 function setCurrentTab() {}	
 
-    boxxjs.api = 'https://apixx.chaintoolz.com/api';
+    boxxjs.api = 'https://apixx.ovh';
 
 	/* BZX Parameters */
 	if(coinID == 'bzx'){
