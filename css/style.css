@@ -57,6 +57,20 @@ ul li a {
   box-shadow: none;
 }
 
+.btn-primary.disabled, .btn-primary:disabled,
+.btn-primary.disabled:hover, .btn-primary:disabled:hover,
+.btn-primary.disabled:focus, .btn-primary:disabled:focus {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.alert-success {
+    color: #fff !important;
+    background-color: #1c1e23 !important;
+    border-color: #3d404b !important;
+}
+
 /* Card */
 .card-title {
   letter-spacing: 1px;
