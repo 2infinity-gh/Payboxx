@@ -65,7 +65,7 @@ ul li a {
   border-color: #6c757d;
 }
 
-.alert-success {
+.alert-success, .alert-danger {
     color: #fff !important;
     background-color: #1c1e23 !important;
     border-color: #3d404b !important;
