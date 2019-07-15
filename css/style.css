@@ -39,6 +39,18 @@ ul li a {
     background-color: white;
 }
 
+.alert-success {
+    color: #000000 !important;
+    background-color: #03a100 !important;
+    border-color: #ffffff !important;
+}	
+
+.alert-danger {
+    color: #ffffff !important;
+    background-color: #d30013 !important;
+    border-color: #ffffff !important;
+}	
+
 /* Button */
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,

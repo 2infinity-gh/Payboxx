@@ -529,19 +529,19 @@ setCurrentTab(coinID);
 
 	function walletApiBalance() {
 	 addr =  $("#walletAddress"+coinID).html();
-	 var coinIDup = coinID.toUpperCase();
+	 
 
 	 $.ajax ({
 		 type: "GET",
 		 url: "https://apixx.ovh/?s="+coinID+"&q=getbalance&a="+$("#walletAddress"+coinID).html(),
 		 dataType: "json",
 		 error: function(data) {
-			 $("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
+			 $("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!(reload privkey if issue persists)');
 		 },
 		 success: function(data) {
-			if(data.balance.confirmed == null){ data.balance.confirmed = 0;}
-			$("#walletBalance"+coinID).html(data.balance.confirmed+" "+coinIDup).fadeOut().fadeIn();
-
+			
+			$("#walletBalance"+coinID).html(data.balance.confirmed+" "+coinID.toUpperCase()).fadeOut().fadeIn();
+			$("#walletBalanceUn"+coinID).html(data.balance.unconfirmed+" "+coinID.toUpperCase()).fadeOut().fadeIn();
 			$("#walletLoader"+coinID).addClass("hidden");
 		 },
 		 complete: function(data, status) {
@@ -563,7 +563,7 @@ setCurrentTab(coinID);
 			 $("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
 		 },
 		 success: function(data) {
-			$("#walletBalance"+coinID).html(data.balance.confirmed+" "+coinIDup).fadeOut().fadeIn();
+			$("#walletBalanceUn"+coinID).html(data.balance.unconfirmed+" "+coinIDup).fadeOut().fadeIn();
 
 			$("#walletLoader"+coinID).addClass("hidden");
 		 },
