@@ -1,6 +1,4 @@
 /* Global */
-
-
 html,
 body {
   height: 100%;
@@ -43,13 +41,13 @@ ul li a {
     color: #000000 !important;
     background-color: #03a100 !important;
     border-color: #ffffff !important;
-}	
+}
 
 .alert-danger {
     color: #ffffff !important;
     background-color: #d30013 !important;
     border-color: #ffffff !important;
-}	
+}
 
 /* Button */
 .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -200,8 +198,19 @@ ul li a {
   color: #3d404b;
 }
 
+.table-responsive {
+  overflow-x:auto;
+}
+
+.remove {
+  display: none;
+}
+
 @media (min-width:  575.98px) {
   .card {
     min-height: 777px;
+  }
+  .remove {
+    display: block;
   }
 }

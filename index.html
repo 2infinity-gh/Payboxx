@@ -73,7 +73,7 @@
               <div class="tab-pane tab-content" id="bzx">
                 <form id="bzxForm">
                   <div class="form-row">
-                    <div class="form-group col-10">
+                    <div class="form-group col-sm-10">
                       <label for="redeemFrombzx">BZX Private Key <a href="#" data-toggle="tooltip"
                           title="Fill in your BZX privatekey and click on load."><i
                             class="far fa-question-circle gray ml-1"></i></a></label>
@@ -89,8 +89,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group col-2 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-2 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button class="btn btn-primary blue" type="button" id="newWalletbzx" data-toggle="modal"
                           data-target="#modalNewAddressBZX">New</button>
@@ -99,25 +99,27 @@
                   </div>
                   <div class="form-group">
                     <div class="hidden alert alert-danger" id="redeemFromStatusbzx" role="alert"></div>
-                    <table class="table table-sm table-bordered">
-                      <tbody>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Address:</td>
-                          <td class="bluetext" id="walletAddressbzx" colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Balance:</td>
-                          <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
-						  <td class="text-muted" style="width: 75px">Pending:</td>
-                          <td class="bluetext" id="walletBalanceUnbzx"> 0 BZX</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-bordered">
+                        <tbody>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Address:</td>
+                            <td class="bluetext" id="walletAddressbzx" colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Balance:</td>
+                            <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
+                            <td class="text-muted" style="width: 75px">Pending:</td>
+                            <td class="bluetext" id="walletBalanceUnbzx"> 0 BZX</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of funds available.</small>
                   </div>
                   <div class="output">
                     <div class="form-row" id="walletSpendTobzx">
-                      <div class="form-group col-8">
+                      <div class="form-group col-sm-8">
                         <label for="addressTobzx">BZX Destination address <a href="#" data-toggle="tooltip"
                             title="Fill in the BZX address where you wish to send funds to"><i
                               class="far fa-question-circle gray ml-1"></i></a></label>
@@ -130,7 +132,7 @@
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BZX address.</small>
                       </div>
-                      <div class="form-group col-4 text-right">
+                      <div class="form-group col-sm-4 text-sm-right">
                         <label for="amountTosendbzx">Amount <a href="#" data-toggle="tooltip"
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
@@ -144,7 +146,7 @@
                     </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-group col-8 mb-0">
+                    <div class="form-group col-sm-8 mb-0">
                       <label for="formGroupFee">Fee</label>
                       <div class="input-group mb-2">
                         <input type="text" class="form-control" id="txFeebzx" placeholder="0.001" value="0.001">
@@ -152,10 +154,10 @@
                           <div class="input-group-text blue">BZX</div>
                         </div>
                       </div>
-                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 BZX.</small>
+                      <small id="FeeHelp" class="form-text text-muted mb-3">The minimum fee is 0.001 BZX.</small>
                     </div>
-                    <div class="form-group col-4 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-4 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button type="button" id="walletSendBtnbzx" class="btn btn-primary blue">Send</button>
                         <button type="button" class="btn btn-primary blue" onclick="resetBZX()">Reset</button>
@@ -170,7 +172,7 @@
               <div class="tab-pane tab-content" id="gxx">
                 <form id="gxxForm">
                   <div class="form-row">
-                    <div class="form-group col-10">
+                    <div class="form-group col-sm-10">
                       <label for="redeemFrom">GXX Private Key <a href="#" data-toggle="tooltip"
                           title="Fill in your GXX privatekey and click on load."><i
                             class="far fa-question-circle gray ml-1"></i></a></label>
@@ -186,8 +188,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group col-2 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-2 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button class="btn btn-primary yellow" type="button" id="newWalletgxx" data-toggle="modal"
                           data-target="#modalNewAddressGXX">New</button>
@@ -196,25 +198,28 @@
                   </div>
                   <div class="form-group">
                     <div class="hidden alert alert-danger" id="redeemFromStatusgxx" role="alert"></div>
-                    <table class="table table-sm table-bordered">
-                      <tbody>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Address:</td>
-                          <td class="yellowtext" id="walletAddressgxx" colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Balance:</td>
-                          <td class="yellowtext" id="walletBalancegxx"> 0 GXX</td>
-						  <td class="text-muted" style="width: 75px">Pending:</td>
-                          <td class="yellowtext" id="walletBalanceUngxx"> 0 GXX</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of funds available.</small>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-bordered">
+                        <tbody>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Address:</td>
+                            <td class="yellowtext" id="walletAddressgxx" colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Balance:</td>
+                            <td class="yellowtext" id="walletBalancegxx"> 0 GXX</td>
+                            <td class="text-muted" style="width: 75px">Pending:</td>
+                            <td class="yellowtext" id="walletBalanceUngxx"> 0 GXX</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of funds
+                      available.</small>
                   </div>
                   <div class="output">
                     <div class="form-row" id="walletSpendTogxx">
-                      <div class="form-group col-8">
+                      <div class="form-group col-sm-8">
                         <label for="addressTogxx">GXX Destination address <a href="#" data-toggle="tooltip"
                             title="Fill in the GXX address where you wish to send funds to"><i
                               class="far fa-question-circle gray ml-1"></i></a></label>
@@ -224,10 +229,11 @@
                           </div>
                           <input type="text" id="addressTogxx" class="form-control addressTo" placeholder="">
                         </div>
-                        <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
+                        <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the
+                          correct
                           GXX address.</small>
                       </div>
-                      <div class="form-group col-4 text-right">
+                      <div class="form-group col-sm-4 text-sm-right">
                         <label for="amountTosendgxx">Amount <a href="#" data-toggle="tooltip"
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
@@ -241,7 +247,7 @@
                     </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-group col-8 mb-0">
+                    <div class="form-group col-sm-8 mb-0">
                       <label for="formGroupFee">Fee</label>
                       <div class="input-group mb-2">
                         <input type="text" class="form-control" id="txFeegxx" placeholder="0.001" value="0.001">
@@ -249,10 +255,10 @@
                           <div class="input-group-text yellow">GXX</div>
                         </div>
                       </div>
-                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.001 GXX.</small>
+                      <small id="FeeHelp" class="form-text text-muted mb-3">The minimum fee is 0.001 GXX.</small>
                     </div>
-                    <div class="form-group col-4 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-4 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button type="button" id="walletSendBtngxx" class="btn btn-primary yellow">Send</button>
                         <button type="button" class="btn btn-primary yellow" onclick="resetGXX()">Reset</button>
@@ -267,7 +273,7 @@
               <div class="tab-pane tab-content active" id="bcz">
                 <form id="bczForm">
                   <div class="form-row">
-                    <div class="form-group col-10">
+                    <div class="form-group col-sm-10">
                       <label for="redeemFrom">BCZ Private Key <a href="#" data-toggle="tooltip"
                           title="Fill in your BCZ privatekey and click on load."><i
                             class="far fa-question-circle gray ml-1"></i></a></label>
@@ -283,8 +289,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group col-2 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-2 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button class="btn btn-primary green" type="button" id="newWalletbcz" data-toggle="modal"
                           data-target="#modalNewAddressBCZ">New</button>
@@ -293,25 +299,27 @@
                   </div>
                   <div class="form-group">
                     <div class="hidden alert alert-danger" id="redeemFromStatusbcz" role="alert"></div>
-                    <table class="table table-sm table-bordered">
-                      <tbody>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Address:</td>
-                          <td class="greentext" id="walletAddressbcz" colspan="3"></td>
-                        </tr>
-                        <tr>
-                          <td class="text-muted" style="width: 75px">Balance:</td>
-                          <td class="greentext" id="walletBalancebcz"> 0 BCZ</td>
-						  <td class="text-muted" style="width: 75px">Pending:</td>
-                          <td class="greentext" id="walletBalanceUnbcz"> 0 BCZ</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="table-responsive">
+                      <table class="table table-sm table-bordered">
+                        <tbody>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Address:</td>
+                            <td class="greentext" id="walletAddressbcz" colspan="3"></td>
+                          </tr>
+                          <tr>
+                            <td class="text-muted" style="width: 75px">Balance:</td>
+                            <td class="greentext" id="walletBalancebcz"> 0 BCZ</td>
+                            <td class="text-muted" style="width: 75px">Pending:</td>
+                            <td class="greentext" id="walletBalanceUnbcz"> 0 BCZ</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <small id="PrivateKeysHelp" class="form-text text-muted">Total amount of funds available.</small>
                   </div>
                   <div class="output">
                     <div class="form-row" id="walletSpendTobcz">
-                      <div class="form-group col-8">
+                      <div class="form-group col-sm-8">
                         <label for="addressTobcz">BCZ Destination address <a href="#" data-toggle="tooltip"
                             title="Fill in the BCZ address where you wish to send funds to"><i
                               class="far fa-question-circle gray ml-1"></i></a></label>
@@ -324,7 +332,7 @@
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BCZ address.</small>
                       </div>
-                      <div class="form-group col-4 text-right">
+                      <div class="form-group col-sm-4 text-sm-right">
                         <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip"
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
@@ -338,7 +346,7 @@
                     </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-group col-8  mb-0">
+                    <div class="form-group col-sm-8  mb-0">
                       <label for="formGroupFee">Fee</label>
                       <div class="input-group mb-2">
                         <input type="text" class="form-control" id="txFeebcz" placeholder="0.0001" value="0.0001"
@@ -347,10 +355,10 @@
                           <div class="input-group-text green">BCZ</div>
                         </div>
                       </div>
-                      <small id="FeeHelp" class="form-text text-muted">The minimum fee is 0.0001 BCZ.</small>
+                      <small id="FeeHelp" class="form-text text-muted mb-3">The minimum fee is 0.0001 BCZ.</small>
                     </div>
-                    <div class="form-group col-4 text-right">
-                      <label>&nbsp;</label>
+                    <div class="form-group col-sm-4 text-sm-right">
+                      <label class="remove">&nbsp;</label>
                       <div class="buttons">
                         <button type="button" id="walletSendBtnbcz" class="btn btn-primary green">Send</button>
                         <button type="button" class="btn btn-primary green" onclick="resetBCZ()">Reset</button>
