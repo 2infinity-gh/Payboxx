@@ -126,6 +126,7 @@ setCurrentTab(coinID);
 		$.each($(".output #walletSpendTobzx"), function(i,o){
 			var amount = document.getElementById("amountTosendbzx").value;
 			var addr = document.getElementById("addressTobzx").value;
+			addr = addr.replace(/\s/g, '');
 				if(amount*1>0){
 				total += amount*1;
 				tx.addoutput(addr, amount*1);
@@ -203,6 +204,7 @@ setCurrentTab(coinID);
 		$.each($(".output #walletSpendTogxx"), function(i,o){
 			var amount = document.getElementById("amountTosendgxx").value;
 			var addr = document.getElementById("addressTogxx").value;
+			addr = addr.replace(/\s/g, '');
 				if(amount*1>0){
 				total += amount*1;
 				tx.addoutput(addr, amount*1);
@@ -281,6 +283,7 @@ setCurrentTab(coinID);
 		$.each($(".output #walletSpendTobcz"), function(i,o){
 			var amount = document.getElementById("amountTosendbcz").value;
 			var addr = document.getElementById("addressTobcz").value;
+			addr = addr.replace(/\s/g, '');
 				if(amount*1>0){
 				total += amount*1;
 				tx.addoutput(addr, amount*1);
