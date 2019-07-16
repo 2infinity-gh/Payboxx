@@ -20,6 +20,45 @@ setCurrentTab(coinID);
 	}
 	}, 60000);
 	
+	function onQRCodeScanned(scannedQR){
+			var scannedAddress = document.getElementById("addressTo"+coinID);
+			if(scannedAddress)
+			{
+				scannedAddress.value = scannedQR;
+				$('#modalQrscanner').modal('hide');
+			}
+	}
+
+	$('#modalQrscanner').on('shown.bs.modal', function (e) {
+    
+	JsQRScannerReady();
+	
+	})
+	
+
+	
+	function JsQRScannerReady()
+    {
+        //create a new scanner passing to it a callback function that will be invoked when
+        //the scanner succesfully scan a QR code
+        var jbScanner = new JsQRScanner(onQRCodeScanned);
+        //reduce the size of analyzed images to increase performance on mobile devices
+        jbScanner.setSnapImageMaxSize(300);
+    	var scannerParentElement = document.getElementById("QRscanner");
+    	if(scannerParentElement)
+    	{
+    	    //append the jbScanner to an existing DOM element
+    		jbScanner.appendTo(scannerParentElement);
+			
+    	} 
+
+		$('#modalQrscanner').on('hide.bs.modal', function (e) {	
+			
+		var scannerParent = document.getElementById("QRscanner");
+		jbScanner.removeFrom(scannerParent);
+		
+		})
+    }
 	
 
 
@@ -543,8 +582,8 @@ setCurrentTab(coinID);
 		 },
 		 success: function(data) {
 			
-			$("#walletBalance"+coinID).html(data.balance.confirmed+" "+coinID.toUpperCase()).fadeOut().fadeIn();
-			$("#walletBalanceUn"+coinID).html(data.balance.unconfirmed+" "+coinID.toUpperCase()).fadeOut().fadeIn();
+			$("#walletBalance"+coinID).html(parseFloat(data.balance.confirmed).toFixed(8)+" "+coinID.toUpperCase()).fadeOut().fadeIn();
+			$("#walletBalanceUn"+coinID).html(parseFloat(data.balance.unconfirmed).toFixed(8)+" "+coinID.toUpperCase()).fadeOut().fadeIn();
 			$("#walletLoader"+coinID).addClass("hidden");
 		 },
 		 complete: function(data, status) {

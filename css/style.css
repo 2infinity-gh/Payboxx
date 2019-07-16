@@ -37,6 +37,10 @@ ul li a {
     background-color: white;
 }
 
+.qrPreviewVideo{
+	width: 100%;
+}
+
 .alert-success {
     color: #000000 !important;
     background-color: #03a100 !important;

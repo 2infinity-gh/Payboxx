@@ -109,6 +109,8 @@
                           <tr>
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
+                          </tr>
+						  <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="bluetext" id="walletBalanceUnbzx"> 0 BZX</td>
                           </tr>
@@ -137,7 +139,7 @@
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
                         <div class="input-group mb-2">
-                          <input type="text" id="amountTosendbzx" class="form-control amount" placeholder="">
+                          <input type="text" id="amountTosendbzx" class="form-control amount" placeholder="" onkeypress="return isNumber(event)">
                           <div class="input-group-append">
                             <span class="input-group-text blue">BZX</span>
                           </div>
@@ -208,6 +210,8 @@
                           <tr>
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="yellowtext" id="walletBalancegxx"> 0 GXX</td>
+                          </tr>
+						  <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="yellowtext" id="walletBalanceUngxx"> 0 GXX</td>
                           </tr>
@@ -228,6 +232,7 @@
                             <div class="input-group-text yellow"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTogxx" class="form-control addressTo" placeholder="">
+				
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the
                           correct
@@ -238,7 +243,7 @@
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
                         <div class="input-group mb-2">
-                          <input type="text" id="amountTosendgxx" class="form-control amount" placeholder="">
+                          <input type="text" id="amountTosendgxx" class="form-control amount" placeholder="" onkeypress="return isNumber(event)">
                           <div class="input-group-append">
                             <span class="input-group-text yellow">GXX</span>
                           </div>
@@ -309,6 +314,8 @@
                           <tr>
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="greentext" id="walletBalancebcz"> 0 BCZ</td>
+                          </tr>
+						  <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="greentext" id="walletBalanceUnbcz"> 0 BCZ</td>
                           </tr>
@@ -328,16 +335,17 @@
                             <div class="input-group-text green"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTobcz" class="form-control addressTo" placeholder="">
+						    
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BCZ address.</small>
                       </div>
                       <div class="form-group col-sm-4 text-sm-right">
-                        <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip"
+                        <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip" 
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
                         <div class="input-group mb-2">
-                          <input type="text" id="amountTosendbcz" class="form-control amount" placeholder="">
+                          <input type="text" id="amountTosendbcz" class="form-control amount" placeholder="" onkeypress="return isNumber(event)">
                           <div class="input-group-append">
                             <span class="input-group-text green">BCZ</span>
                           </div>
@@ -760,6 +768,31 @@
     </div>
   </div>
   <!-- qrcode modal -->
+  
+  
+    <!-- qrcode  Scanner modal -->
+  <div class="modal fade" id="modalQrscanner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Scan QR-Code</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="modal-body" align="center">
+          <div id="QRscanner"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="qrScannerClose">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- qrcode modal -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -776,6 +809,7 @@
   <script type="text/javascript" src="js/ripemd160.js"></script>
   <script type="text/javascript" src="js/aes.js"></script>
   <script type="text/javascript" src="js/qrcode.js"></script>
+<script type="text/javascript"   src="js/jsqrscanner.nocache.js"></script>
   <script type="text/javascript" src="js/jsbn.js"></script>
   <script type="text/javascript" src="js/ellipticcurve.js"></script>
   <script type="text/javascript" src="js/clipboard.min.js"></script>
@@ -785,6 +819,17 @@
   <script type="text/javascript" src="js/payboxx.js"></script>
 
   <script type="text/javascript">
+  
+    /////////// Allow only numbers in amount //////
+	function isNumber(evt) {
+		evt = (evt) ? evt : window.event;
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		if (charCode > 31 && (charCode < 46 || charCode > 57)) {
+			return false;
+		}
+		return true;
+	}
+  
     var coinID = "bcz";
     var explorer = "https://" + coinID + ".apixx.ovh/";
 
@@ -803,6 +848,9 @@
     }
 
     new ClipboardJS('.btn');
+	
+	
+	
   </script>
 
 </body>
