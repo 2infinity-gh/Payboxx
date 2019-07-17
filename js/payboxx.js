@@ -74,7 +74,7 @@ setCurrentTab(coinID);
 		//console.log(coinID);
 
 		var paperwallet = window.open();
-		paperwallet.document.write('<h2>BZX PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbzx"></div><p>'+$("#newAddressbzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybzx"></div><p>'+$("#newPubKeybzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybzx"></div><p>'+$("#newPrivKeybzx").val()+'</p></div></div><hr>'+
+		paperwallet.document.write('<h2>BitcoinZero PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbzx"></div><p>'+$("#newAddressbzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybzx"></div><p>'+$("#newPubKeybzx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybzx"></div><p>'+$("#newPrivKeybzx").val()+'</p></div></div><hr>'+
 		'<div>A Bitcoin Zero wallet is as simple as a single pairing of a Bitcoin Zero address with its corresponding Bitcoin Zero private key. Such a wallet has been generated for you in your web browser and is '+
 		'displayed above. '+
 		'To safeguard this wallet you must print or otherwise record the Bitcoin Zero address and private key. It is important to make a backup copy of the private key and store it in a safe location. '+
@@ -83,10 +83,10 @@ setCurrentTab(coinID);
 		'keep it safe from water. Treat a paper wallet like cash. '+
 		'Add funds to this wallet by instructing others to send bitcoinzeros to your Bitcoin Zero address. '+
 		'Check your balance by going to https://chainz.cryptoid.info/bzx/ and entering your Bitcoin Zero address. '+
-		'Spend your bitcoinzeros by going to https://payboxx.io and fill in your private key this website. You can also spend your funds by downloading a '+
+		'Spend your coins by going to https://payboxx.io and fill in your private key this website. You can also spend your funds by downloading a '+
 		'Bitcoinzero wallet and importing your private key to the wallet. Keep in mind when you import your single key to a bitcoinzero p2p client and spend funds your key will be '+
 		'bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another bitcoin zero address within the p2p client wallet. You must then '+
-		'backup the p2p client wallet and keep it safe as your remaining bitcoinzeros will be stored there. Satoshi advised that one should never delete a wallet.</div>');
+		'backup the p2p client wallet and keep it safe as your remaining coins will be stored there. Satoshi advised that one should never delete a wallet.</div>');
 		paperwallet.document.close();
 		paperwallet.focus();
 		new QRCode(paperwallet.document.getElementById("qraddressbzx"), {text: $("#newAddressbzx").val(), width: 200, height: 200});
@@ -104,7 +104,7 @@ setCurrentTab(coinID);
 		}
 
 		var paperwallet = window.open();
-		paperwallet.document.write('<h2>GXX PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressgxx"></div><p>'+$("#newAddressgxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeygxx"></div><p>'+$("#newPubKeygxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeygxx"></div><p>'+$("#newPrivKeygxx").val()+'</p></div></div><hr>'+
+		paperwallet.document.write('<h2>GravityCoin PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressgxx"></div><p>'+$("#newAddressgxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeygxx"></div><p>'+$("#newPubKeygxx").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeygxx"></div><p>'+$("#newPrivKeygxx").val()+'</p></div></div><hr>'+
 		'<div>A GravityCoin wallet is as simple as a single pairing of a GravityCoin address with its corresponding GravityCoin private key. Such a wallet has been generated for you in your web browser and is '+
 		'displayed above. '+
 		'To safeguard this wallet you must print or otherwise record the GravityCoin address and private key. It is important to make a backup copy of the private key and store it in a safe location. '+
@@ -112,11 +112,11 @@ setCurrentTab(coinID);
 		'should be kept a secret. Whomever you share the private key with has access to spend all the GravityCoins associated with that address. If you print your wallet then store it in a zip lock bag to'+
 		'keep it safe from water. Treat a paper wallet like cash. '+
 		'Add funds to this wallet by instructing others to send GravityCoins to your GravityCoin address. '+
-		'Check your balance by going to https://chainz.cryptoid.info/bzx/ and entering your GravityCoin address. '+
-		'Spend your GravityCoins by going to https://payboxx.io and fill in your private key this website. You can also spend your funds by downloading a '+
+		'Check your balance by going to https://chainz.cryptoid.info/gxx/ and entering your GravityCoin address. '+
+		'Spend your coins by going to https://payboxx.io and fill in your private key this website. You can also spend your funds by downloading a '+
 		'Gravitycoin wallet and importing your private key to the wallet. Keep in mind when you import your single key to a Gravitycoin p2p client and spend funds your key will be '+
 		'bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another GravityCoin address within the p2p client wallet. You must then '+
-		'backup the p2p client wallet and keep it safe as your remaining GravityCoins will be stored there. Satoshi advised that one should never delete a wallet.</div>');		
+		'backup the p2p client wallet and keep it safe as your remaining coins will be stored there. Satoshi advised that one should never delete a wallet.</div>');		
 		paperwallet.document.close();
 		paperwallet.focus();
 		new QRCode(paperwallet.document.getElementById("qraddressgxx"), {text: $("#newAddressgxx").val(), width: 200, height: 200});
@@ -134,19 +134,19 @@ setCurrentTab(coinID);
 		}
 
 		var paperwallet = window.open();
-		paperwallet.document.write('<h2>BCZ PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbcz"></div><p>'+$("#newAddressbcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybcz"></div><p>'+$("#newPubKeybcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybcz"></div><p>'+$("#newPrivKeybcz").val()+'</p></div></div><hr>'+
-		'<div>A BitcoinCZ wallet is as simple as a single pairing of a BitcoinCZ address with its corresponding BitcoinCZ private key. Such a wallet has been generated for you in your web browser and is '+
+		paperwallet.document.write('<h2>Bitcoin CZ PaperWallet</h2><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Address (Share)</h3></div><div style="text-align: center;"><div id="qraddressbcz"></div><p>'+$("#newAddressbcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Public Key</h3></div><div style="text-align: center;"><div id="qrpubkeybcz"></div><p>'+$("#newPubKeybcz").val()+'</p></div></div><hr><div style="margin-top: 5px; margin-bottom: 5px"><div><h3 style="margin-top: 0">Private Key (KEEP SECRET!)</h3></div><div style="text-align: center;"><div id="qrprivkeybcz"></div><p>'+$("#newPrivKeybcz").val()+'</p></div></div><hr>'+
+		'<div>A Bitcoin CZ wallet is as simple as a single pairing of a BitcoinCZ address with its corresponding Bitcoin CZ private key. Such a wallet has been generated for you in your web browser and is '+
 		'displayed above. '+
-		'To safeguard this wallet you must print or otherwise record the BitcoinCZ address and private key. It is important to make a backup copy of the private key and store it in a safe location. '+
-		'This site does not have knowledge of your private key. Your BitcoinCZ private key '+
-		'should be kept a secret. Whomever you share the private key with has access to spend all the Bitcoinczs associated with that address. If you print your wallet then store it in a zip lock bag to '+
-		'keep it safe from water. Treat a paper wallet like cash. '+
+		'To safeguard this wallet you must print or otherwise record the Bitcoin CZ address and private key. It is important to make a backup copy of the private key and store it in a safe location. '+
+		'This site does not have knowledge of your private key. Your Bitcoin CZ private key '+
+		'should be kept a secret. Whomever you share the private key with has access to spend all the coins associated with that address. If you print your wallet then store it in a zip lock bag to '+
+		'keep it safe from water. Treat a paperwallet like cash. '+
 		'Add funds to this wallet by instructing others to send bitcoinczs to your BitcoinCZ address. '+
-		'Check your balance by going to https://chainz.cryptoid.info/bzx/ and entering your BitcoinCZ address. '+
-		'Spend your bitcoinczs by going to https://payboxx.io and fill in your private key this website. You can also spend your funds by downloading a '+
-		'BitcoinCZ wallet and importing your private key to the wallet. Keep in mind when you import your single key to a bitcoincz p2p client and spend funds your key will be '+
-		'bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another Bitcoincz address within the p2p client wallet. You must then '+
-		'backup the p2p client wallet and keep it safe as your remaining BitcoinCZs will be stored there. Satoshi advised that one should never delete a wallet.</div>');
+		'Check your balance by going to https://chainz.cryptoid.info/bcz/ and entering your BitcoinCZ address. '+
+		'Spend your coins by going to https://payboxx.io and fill in your private key on this website. You can also spend your funds by downloading a '+
+		'Bitcoin CZ wallet and importing your private key to the wallet. Keep in mind when you import your single key to a bitcoin CZ p2p client and spend funds your key will be '+
+		'bundled with other private keys in the p2p client wallet. When you perform a transaction your change will be sent to another Bitcoin CZ address within the p2p client wallet. You must then '+
+		'backup the p2p client wallet and keep it safe as your remaining coins will be stored there. Satoshi advised that one should never delete a wallet.</div>');
 		paperwallet.document.close();
 		paperwallet.focus();
 		new QRCode(paperwallet.document.getElementById("qraddressbcz"), {text: $("#newAddressbcz").val(), width: 200, height: 200});
