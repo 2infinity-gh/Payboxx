@@ -130,6 +130,10 @@
                             <div class="input-group-text blue"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTobzx" class="form-control addressTo" placeholder="">
+						    <div class="input-group-append">
+							  <button class="qrcodeBtn btn btn-primary blue" type="button" data-toggle="modal"
+								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+						    </div>
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BZX address.</small>
@@ -232,7 +236,10 @@
                             <div class="input-group-text yellow"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTogxx" class="form-control addressTo" placeholder="">
-				
+							<div class="input-group-append">
+							  <button class="qrcodeBtn btn btn-primary yellow" type="button" data-toggle="modal"
+								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+						    </div>
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the
                           correct
@@ -335,7 +342,10 @@
                             <div class="input-group-text green"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTobcz" class="form-control addressTo" placeholder="">
-						    
+							<div class="input-group-append">
+							  <button class="qrcodeBtn btn btn-primary green" type="button" data-toggle="modal"
+								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+						    </div>    
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BCZ address.</small>
@@ -397,7 +407,7 @@
               (alpha/v1.0.2) guide</h5>
             <p class="card-text small text-muted">
               PayBOXX is a web interface for an intuitive interaction with blockchains, intended to make payment process
-              easy and quick. This application allows users to generate addresses, choose a cryptocurrency,
+              easy, quick and intuitive. This application allows users to generate addresses, choose a cryptocurrency,
               and keep full control of funds without involving a third party.
             </p>
           </div>
@@ -407,7 +417,8 @@
               <ul class="small text-muted">
                 <li>Pick the currency you want to send.</li>
                 <li>Import the private key associated with your wallet address.</li>
-                <li>Fill in the correct destination address.</li>
+                <li>Fill in the correct destination address or use the QRcode scanner by clicking on the camera icon.
+				<small>( In iOS make sure to grand permission in Safari settings for the camera to work.)</small></li>
                 <li>Enter the amount you want to transact.</li>
                 <li>After this your transaction fee will be calculated.</li>
                 <li>Send coins by simply clicking the <strong>Send</strong> button.</li>
@@ -427,7 +438,7 @@
           </div>
           <div class="card-footer">
             <p class="card-text small text-muted">Disclaimer: PayBOXX is not responsible or liable for any mistakes,
-              errors or omissions in the data as displayed. We are NOT financial advisors, and PayBOXX does not give
+              errors or omisions in the data as displayed. We are NOT financial advisors, and PayBOXX does not give
               trading advices.</p>
           </div>
         </div>
@@ -809,7 +820,7 @@
   <script type="text/javascript" src="js/ripemd160.js"></script>
   <script type="text/javascript" src="js/aes.js"></script>
   <script type="text/javascript" src="js/qrcode.js"></script>
-
+  <script type="text/javascript" src="js/jsqrscanner.gwt.js"></script>
   <script type="text/javascript" src="js/jsbn.js"></script>
   <script type="text/javascript" src="js/ellipticcurve.js"></script>
   <script type="text/javascript" src="js/clipboard.min.js"></script>

@@ -24,8 +24,14 @@ setCurrentTab(coinID);
 			var scannedAddress = document.getElementById("addressTo"+coinID);
 			if(scannedAddress)
 			{
+				
+				if(scannedQR.includes(":")){
+				scannedQR = scannedQR.split(':')[1];
+				}
 				scannedAddress.value = scannedQR;
 				$('#modalQrscanner').modal('hide');
+				
+				
 			}
 	}
 
@@ -35,10 +41,9 @@ setCurrentTab(coinID);
 	
 	})
 	
-
-	
 	function JsQRScannerReady()
     {
+
         //create a new scanner passing to it a callback function that will be invoked when
         //the scanner succesfully scan a QR code
         var jbScanner = new JsQRScanner(onQRCodeScanned);
@@ -51,13 +56,11 @@ setCurrentTab(coinID);
     		jbScanner.appendTo(scannerParentElement);
 			
     	} 
-
-		$('#modalQrscanner').on('hide.bs.modal', function (e) {	
-			
-		var scannerParent = document.getElementById("QRscanner");
-		jbScanner.removeFrom(scannerParent);
-		
-		})
+    
+	$('#modalQrscanner').on('hide.bs.modal', function (e) {
+    $('#QRscanner').empty();
+	jbScanner.stopScanning();
+	})
     }
 	
 
