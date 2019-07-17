@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description"
     content="PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions" />
+  <meta name="apple-mobile-web-app-title" content="AppTitle">
+  <link rel="apple-touch-icon" href="square.png">
+
   <title>PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,8 +20,8 @@
   <meta property="og:title" content="PayBOXX" />
   <meta name="author" content="DEVCØN, 2INfINITy" />
   <meta property="og:locale" content="en" />
-  <link rel="canonical" href="" />
-  <meta property="og:url" content="" />
+  <link rel="canonical" href="https://www/payboxx.io" />
+  <meta property="og:url" content="square.png" />
   <meta property="og:site_name" content="PayBOXX" />
   <meta property="og:image" content="" />
   <meta property="og:alt" content="PayBOXX" />
@@ -27,20 +30,16 @@
   <script type="application/ld+json">
           {
             "name": "PayBOXX",
-            "description": null,
+            "description": "PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions",
             "author": {
               "@type": "Person",
               "name": "DEVCØN, 2INfINITy"
             },
             "@type": "WebSite",
-            "url": "",
-            "publisher": null,
-            "image": null,
-            "headline": "PayBOXX",
-            "dateModified": null,
-            "datePublished": null,
-            "sameAs": null,
-            "mainEntityOfPage": null,
+            "url": "https://www/payboxx.io",
+            "publisher": "DEVCØN, 2INfINITy",
+            "image": "square.png",
+            "headline": "PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions",
             "@context": "http://schema.org"
           }
         </script>
@@ -110,7 +109,7 @@
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="bluetext" id="walletBalancebzx"> 0 BZX</td>
                           </tr>
-						  <tr>
+                          <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="bluetext" id="walletBalanceUnbzx"> 0 BZX</td>
                           </tr>
@@ -130,10 +129,10 @@
                             <div class="input-group-text blue"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTobzx" class="form-control addressTo" placeholder="">
-						    <div class="input-group-append">
-							  <button class="qrcodeBtn btn btn-primary blue" type="button" data-toggle="modal"
-								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
-						    </div>
+                          <div class="input-group-append enable">
+                            <button class="qrcodeBtn btn btn-primary blue" type="button" data-toggle="modal"
+                              data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+                          </div>
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BZX address.</small>
@@ -215,7 +214,7 @@
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="yellowtext" id="walletBalancegxx"> 0 GXX</td>
                           </tr>
-						  <tr>
+                          <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="yellowtext" id="walletBalanceUngxx"> 0 GXX</td>
                           </tr>
@@ -236,10 +235,10 @@
                             <div class="input-group-text yellow"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTogxx" class="form-control addressTo" placeholder="">
-							<div class="input-group-append">
-							  <button class="qrcodeBtn btn btn-primary yellow" type="button" data-toggle="modal"
-								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
-						    </div>
+                          <div class="input-group-append enable">
+                            <button class="qrcodeBtn btn btn-primary yellow" type="button" data-toggle="modal"
+                              data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+                          </div>
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the
                           correct
@@ -322,7 +321,7 @@
                             <td class="text-muted" style="width: 75px">Balance:</td>
                             <td class="greentext" id="walletBalancebcz"> 0 BCZ</td>
                           </tr>
-						  <tr>
+                          <tr>
                             <td class="text-muted" style="width: 75px">Pending:</td>
                             <td class="greentext" id="walletBalanceUnbcz"> 0 BCZ</td>
                           </tr>
@@ -342,16 +341,16 @@
                             <div class="input-group-text green"><i class="fas fa-share"></i></div>
                           </div>
                           <input type="text" id="addressTobcz" class="form-control addressTo" placeholder="">
-							<div class="input-group-append">
-							  <button class="qrcodeBtn btn btn-primary green" type="button" data-toggle="modal"
-								data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
-						    </div>    
+                          <div class="input-group-append enable">
+                            <button class="qrcodeBtn btn btn-primary green" type="button" data-toggle="modal"
+                              data-target="#modalQrscanner"><i class="fas fa-camera"></i></button>
+                          </div>
                         </div>
                         <small id="DestinationAddressHelp" class="form-text text-muted">Make sure to fill in the correct
                           BCZ address.</small>
                       </div>
                       <div class="form-group col-sm-4 text-sm-right">
-                        <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip" 
+                        <label for="amountTosendbcz">Amount <a href="#" data-toggle="tooltip"
                             title="Fill in the amount you wish to send."><i
                               class="far fa-question-circle gray ml-1 "></i></a></label>
                         <div class="input-group mb-2">
@@ -418,7 +417,7 @@
                 <li>Pick the currency you want to send.</li>
                 <li>Import the private key associated with your wallet address.</li>
                 <li>Fill in the correct destination address or use the QRcode scanner by clicking on the camera icon.
-				<small>( In iOS make sure to grand permission in Safari settings for the camera to work.)</small></li>
+                  <small>( In iOS make sure to grand permission in Safari settings for the camera to work.)</small></li>
                 <li>Enter the amount you want to transact.</li>
                 <li>After this your transaction fee will be calculated.</li>
                 <li>Send coins by simply clicking the <strong>Send</strong> button.</li>
@@ -779,9 +778,9 @@
     </div>
   </div>
   <!-- qrcode modal -->
-  
-  
-    <!-- qrcode  Scanner modal -->
+
+
+  <!-- qrcode  Scanner modal -->
   <div class="modal fade" id="modalQrscanner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -830,37 +829,40 @@
   <script type="text/javascript" src="js/payboxx.js"></script>
 
   <script type="text/javascript">
-  
+
     /////////// Allow only numbers in amount //////
 
-	
-	(function($) {
-  $.fn.inputFilter = function(inputFilter) {
-    return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
-      if (inputFilter(this.value)) {
-        this.oldValue = this.value;
-        this.oldSelectionStart = this.selectionStart;
-        this.oldSelectionEnd = this.selectionEnd;
-      } else if (this.hasOwnProperty("oldValue")) {
-        this.value = this.oldValue;
-        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-      }
+
+    (function ($) {
+      $.fn.inputFilter = function (inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
+          if (inputFilter(this.value)) {
+            this.oldValue = this.value;
+            this.oldSelectionStart = this.selectionStart;
+            this.oldSelectionEnd = this.selectionEnd;
+          } else if (this.hasOwnProperty("oldValue")) {
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+          }
+        });
+      };
+    }(jQuery));
+
+
+
+    $("#amountTosendbcz").inputFilter(function (value) {
+      return /^-?\d*[.,]?\d*$/.test(value);
     });
-  };
-}(jQuery));
+
+    $("#amountTosendbzx").inputFilter(function (value) {
+      return /^-?\d*[.,]?\d*$/.test(value);
+    });
+
+    $("#amountTosendgxx").inputFilter(function (value) {
+      return /^-?\d*[.,]?\d*$/.test(value);
+    });
 
 
-
-	$("#amountTosendbcz").inputFilter(function(value) {
-	return /^-?\d*[.,]?\d*$/.test(value); });
-
-	$("#amountTosendbzx").inputFilter(function(value) {
-	return /^-?\d*[.,]?\d*$/.test(value); });
-
-	$("#amountTosendgxx").inputFilter(function(value) {
-	return /^-?\d*[.,]?\d*$/.test(value); });
-
-	  
     var coinID = "bcz";
     var explorer = "https://" + coinID + ".apixx.ovh/";
 
@@ -879,9 +881,9 @@
     }
 
     new ClipboardJS('.btn');
-	
-	
-	
+
+
+
   </script>
 
 </body>

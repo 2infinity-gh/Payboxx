@@ -224,11 +224,18 @@ ul li a {
   display: none;
 }
 
+.enable {
+  display: block;
+}
+
 @media (min-width:  575.98px) {
   .card {
-    min-height: 777px;
+    min-height: 834px;
   }
   .remove {
     display: block;
+  }
+  .enable {
+    display: none;
   }
 }
