@@ -8,11 +8,11 @@
   <meta name="description"
     content="PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions" />
   <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#292a2e">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#292a2e">
   <meta name="apple-mobile-web-app-title" content="PayBOXX">
   <meta name="application-name" content="PayBOXX">
   <meta name="msapplication-TileColor" content="#292a2e">
@@ -33,8 +33,6 @@
   <meta property="og:site_name" content="PayBOXX" />
   <meta property="og:image" content="https://payboxx.io/splash.png" />
   <meta property="og:image:alt" content="PayBOXX" />
-  <meta property="og:alt" content="PayBOXX" />
-  <meta property="og:type" content="website" />
   <meta property="og:description"
     content="PayBOXX is a decentralized in-browser payment channel for fast and smooth transactions" />
   <script type="application/ld+json">
@@ -789,7 +787,6 @@
   </div>
   <!-- qrcode modal -->
 
-
   <!-- qrcode  Scanner modal -->
   <div class="modal fade" id="modalQrscanner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
@@ -842,7 +839,6 @@
 
     /////////// Allow only numbers in amount //////
 
-
     (function ($) {
       $.fn.inputFilter = function (inputFilter) {
         return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
@@ -858,8 +854,6 @@
       };
     }(jQuery));
 
-
-
     $("#amountTosendbcz").inputFilter(function (value) {
       return /^-?\d*[.,]?\d*$/.test(value);
     });
@@ -871,7 +865,6 @@
     $("#amountTosendgxx").inputFilter(function (value) {
       return /^-?\d*[.,]?\d*$/.test(value);
     });
-
 
     var coinID = "bcz";
     var explorer = "https://" + coinID + ".apixx.ovh/";
@@ -891,8 +884,6 @@
     }
 
     new ClipboardJS('.btn');
-
-
 
   </script>
 
