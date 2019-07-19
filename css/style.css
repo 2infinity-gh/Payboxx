@@ -41,6 +41,15 @@ body {
   color: var(--white);
 }
 
+:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus  {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 a {
   color: var(--blue);
   text-decoration: underline;
@@ -62,6 +71,10 @@ ul li a {
   display: none;
 }
 
+.dark-icon {
+  background-color: var(--secondary-bg-color);
+  border-color: var(--border-color);
+}
 
 #qrcode {
 	width: 300px;
