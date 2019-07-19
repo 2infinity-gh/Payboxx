@@ -373,15 +373,6 @@
                       </div>
                       <small id="FeeHelp" class="form-text text-muted mb-3">The minimum fee is 0.0001 BCZ.</small>
                     </div>
-                    <!-- <div class="form-group col-sm-4 text-sm-right">
-                      <label class="remove">&nbsp;</label>
-                      <div class="buttons">
-                        <button type="button" id="walletSendBtnbcz" class="btn btn-primary green"><i
-                            class="fa fa-share"></i></button>
-                        <button type="button" class="btn btn-primary green" onclick="resetBCZ()"><i
-                            class="fas fa-redo"></i></button>
-                      </div>
-                    </div> -->
                   </div>
                   <div id="walletSendStatusbcz" class="alert alert-danger hidden mt-3 mb-0" role="alert"></div>
                 </form>
@@ -399,7 +390,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-lg-4 col-md-10 my-4">
         <div class="card">
           <div class="card-header">
@@ -414,19 +404,19 @@
           <div class="card-body">
             <p class="card-text small text-muted">
               <strong>How to send coins using PayBOXX?</strong>
+              </p>
               <ul class="small text-muted">
                 <li>Pick the currency you want to send.</li>
                 <li>Import the private key associated with your wallet address.</li>
-                <li>Fill in the correct destination address or use the QRcode scanner by clicking on the camera icon.
-                  <small>( In iOS make sure to grand permission in Safari settings for the camera to work.)</small></li>
+                <li>Fill in the correct destination address or use the QRcode scanner by clicking on the camera icon.<small>( In iOS make sure to grand permission in Safari settings for the camera to work.)</small></li>
                 <li>Enter the amount you want to transact.</li>
                 <li>After this your transaction fee will be calculated.</li>
                 <li>Send coins by simply clicking the <strong>Send</strong> button.</li>
                 <li>Confirm the transaction.</li>
               </ul>
-            </p>
-            <p class="card-text small text-muted">
+              <p class="card-text small text-muted">
               <strong>How to generate a new wallet address?</strong>
+            </p>
               <ul class="small text-muted">
                 <li>Click the <strong>New</strong> button next to the private key field</li>
                 <li>After popup window has appeared, select <strong>Generate</strong>.</li>
@@ -434,8 +424,7 @@
                   key.</li>
                 <li>Remember: <strong>NEVER</strong> share your private address.</li>
               </ul>
-            </p>
-          </div>
+            </div>
           <div class="card-footer">
             <p class="card-text small text-muted">Disclaimer: PayBOXX is not responsible or liable for any mistakes,
               errors or omisions in the data as displayed. We are NOT financial advisors, and PayBOXX does not give
@@ -859,7 +848,7 @@
     var explorer = "https://" + coinID + ".apixx.ovh/";
 
     $(function () {
-      $('[data-tooltip="tooltip"]').tooltip()
+      $('[data-tooltip="tooltip"]').tooltip({trigger: "hover"})
     })
 
     function resetBZX() {
