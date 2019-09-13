@@ -68,11 +68,11 @@
           <div class="card-body">
             <ul class="nav nav-pills nav-fill mb-3">
               <li class="nav-item mr-2"><a onclick="setCurrentTab('bcz');" class="nav-link green active" href="#bcz"
-                  data-toggle="tab">BCZ</a></li>
+                  data-toggle="tab">BCZ<div class="get-bcz-blockcount small"></div></a></li>
               <li class="nav-item mr-2"><a onclick="setCurrentTab('gxx');" class="nav-link yellow" href="#gxx"
-                  data-toggle="tab">GXX</a></li>
+                  data-toggle="tab">GXX<div class="get-gxx-blockcount small"></div></a></li>
               <li class="nav-item"><a onclick="setCurrentTab('bzx');" class="nav-link blue" href="#bzx"
-                  data-toggle="tab">BZX</a></li>
+                  data-toggle="tab">BZX<div class="get-bzx-blockcount small"></div></a></li>
             </ul>
             <div class="tab-content">
 
@@ -807,6 +807,7 @@
   <script type="text/javascript" src="js/jsqrscanner.gwt.js"></script>
   <script type="text/javascript" src="js/jsbn.js"></script>
   <script type="text/javascript" src="js/ellipticcurve.js"></script>
+  <script type="text/javascript" src="js/numbro.min.js"></script>
   <script type="text/javascript" src="js/clipboard.min.js"></script>
 
   <!-- Custom JavaScript -->
@@ -862,6 +863,55 @@
     }
 
     new ClipboardJS('.btn');
+
+    // Blocks
+
+    // Get API data
+    function getBczData() {
+      $.ajax({
+        type: "GET",
+        url:
+          "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/bcz/api.dws?q=summary&key=d80cee2c7ba0",
+        success: function(data) {
+          var getblockcount = parseFloat(data["bcz"]["height"]);
+          $(".get-bcz-blockcount").html(
+            "#<span>" + numbro(getblockcount).format("0,0") + "</span>"
+          );
+        }
+      });
+    }
+
+    function getGxxData() {
+      $.ajax({
+        type: "GET",
+        url:
+          "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/gxx/api.dws?q=summary&key=d80cee2c7ba0",
+        success: function(data) {
+          var getblockcount = parseFloat(data["gxx"]["height"]);
+          $(".get-gxx-blockcount").html(
+            "#<span>" + numbro(getblockcount).format("0,0") + "</span>"
+          );
+        }
+      });
+    }
+
+    function getBzxData() {
+    $.ajax({
+      type: "GET",
+      url:
+        "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/bzx/api.dws?q=summary&key=d80cee2c7ba0",
+      success: function(data) {
+        var getblockcount = parseFloat(data["bzx"]["height"]);
+        $(".get-bzx-blockcount").html(
+          "<span>#" + numbro(getblockcount).format("0,0") + "</span>"
+        );
+      }
+    });
+  }
+
+  getBczData();
+  getGxxData();
+  getBzxData();
 
   </script>
 
