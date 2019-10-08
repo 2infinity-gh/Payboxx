@@ -871,9 +871,9 @@
       $.ajax({
         type: "GET",
         url:
-          "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/bcz/api.dws?q=summary&key=d80cee2c7ba0",
+          "https://apixx.ovh/?s=bcz&q=summary",
         success: function(data) {
-          var getblockcount = parseFloat(data["bcz"]["height"]);
+          var getblockcount = parseFloat(data["height"]);
           $(".get-bcz-blockcount").html(
             "#<span>" + numbro(getblockcount).format("0,0") + "</span>"
           );
