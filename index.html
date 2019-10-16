@@ -885,9 +885,9 @@
       $.ajax({
         type: "GET",
         url:
-          "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/gxx/api.dws?q=summary&key=d80cee2c7ba0",
+          "https://apixx.ovh/?s=gxx&q=summary",
         success: function(data) {
-          var getblockcount = parseFloat(data["gxx"]["height"]);
+          var getblockcount = parseFloat(data["height"]);
           $(".get-gxx-blockcount").html(
             "#<span>" + numbro(getblockcount).format("0,0") + "</span>"
           );
@@ -899,9 +899,9 @@
     $.ajax({
       type: "GET",
       url:
-        "https://cors-anywhere.herokuapp.com/https://chainz.cryptoid.info/bzx/api.dws?q=summary&key=d80cee2c7ba0",
-      success: function(data) {
-        var getblockcount = parseFloat(data["bzx"]["height"]);
+          "https://apixx.ovh/?s=bzx&q=summary",
+        success: function(data) {
+          var getblockcount = parseFloat(data["height"]);
         $(".get-bzx-blockcount").html(
           "<span>#" + numbro(getblockcount).format("0,0") + "</span>"
         );
