@@ -599,6 +599,7 @@ setCurrentTab(coinID);
 			
 			$("#walletBalance"+coinID).html(parseFloat(data.balance.confirmed).toFixed(8)+" "+coinID.toUpperCase()).fadeOut().fadeIn();
 			$("#walletBalanceUn"+coinID).html(parseFloat(data.balance.unconfirmed).toFixed(8)+" "+coinID.toUpperCase()).fadeOut().fadeIn();
+			$("#walletBalanceIm"+coinID).html(parseFloat(data.balance.immature).toFixed(8)+" "+coinID.toUpperCase()).fadeOut().fadeIn();
 			$("#walletLoader"+coinID).addClass("hidden");
 		 },
 		 complete: function(data, status) {
