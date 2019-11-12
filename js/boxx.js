@@ -344,6 +344,7 @@ function setCurrentTab() {}
 	/* retreive the balance from a given address */
 	boxxjs.addressBalance = function(address, callback){
 		boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=bal&a='+address, callback, "GET");
+		
 	}
 
 	/* decompress an compressed public key */
@@ -1119,7 +1120,8 @@ function setCurrentTab() {}
 		/* broadcast a transaction */
 		r.broadcast = function(callback, txhex){
 			var tx = txhex || this.serialize();
-			boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=broadcast&tx='+tx, callback, "GET");
+			//boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=broadcast&tx='+tx, callback, "GET");
+			boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=broadcastpost', {'txpost':tx},  callback, "POST");
 				
 		}
 
