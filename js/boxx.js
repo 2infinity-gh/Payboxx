@@ -1121,7 +1121,7 @@ function setCurrentTab() {}
 		r.broadcast = function(callback, txhex){
 			var tx = txhex || this.serialize();
 			//boxxjs.ajax(boxxjs.api+'/?s='+coinID+'&q=broadcast&tx='+tx, callback, "GET");
-			boxxjs.ajax(boxxjs.api+'/?s='+coinID+'', callback, "POST" , 'q=broadcastpost&txpost='+tx+'');
+			boxxjs.ajax(boxxjs.api, callback, "POST" , 's='+coinID+'&q=broadcastpost&txpost='+tx+'');
 				
 		}
 
