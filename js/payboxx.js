@@ -1587,7 +1587,7 @@ setCurrentTab(coinID);
 			url: "https://apixx.ovh/?s="+coinID+"&q=listunspent&a="+redeem.addr,
 			dataType: "json",
 			error: function(data) {
-				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
 			},
 			success: function(data) {
 				if((data.status && data.data) && data.status=='success'){
@@ -1610,7 +1610,7 @@ setCurrentTab(coinID);
 				}
 			},
 			complete: function(data, status) {
-				$("#redeemFromBtn").html("Load").attr('disabled',false);
+				$("#redeemFromBtn"+coinID).html("Load").attr('disabled',false);
 				//$("#walletAddress"+coinID).html(redeem.addr);
 				totalInputAmount();
 				
@@ -1619,9 +1619,9 @@ setCurrentTab(coinID);
 
 				console.log("total unspents: "+input_count);
 				
-				if(input_count > 499){
+				if(input_count > 999){
 					
-				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents ('+input_count+') to complete a transaction. ( Max allow: 999 UTXOs)');	
 				$("#walletSendBtn"+coinID).html("X").attr('disabled',true);	
 				}
 				
