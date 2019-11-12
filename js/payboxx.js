@@ -1614,12 +1614,7 @@ setCurrentTab(coinID);
 				//$("#walletAddress"+coinID).html(redeem.addr);
 				totalInputAmount();
 				
-				if(input_count > 499){
-					
-				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
-				$("#walletSendBtnbcz").html("Send").attr('disabled',true);	
-				}
-				else{
+
 					/*  CALCULATE SIZE OF TRANSACTION  */
 
 				console.log("total unspents: "+input_count);
@@ -1643,7 +1638,7 @@ setCurrentTab(coinID);
 										 document.getElementById("txFee"+coinID).value = newfee;
 										 }
 					}
-				}
+				
 			}
 			});
 		}
