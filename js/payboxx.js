@@ -1613,31 +1613,38 @@ setCurrentTab(coinID);
 				$("#redeemFromBtn").html("Load").attr('disabled',false);
 				//$("#walletAddress"+coinID).html(redeem.addr);
 				totalInputAmount();
-
-				/*  CALCULATE SIZE OF TRANSACTION  */
-
-				// console.log("total unspents: "+input_count);
-				var newfee;
-				var txbytes = (input_count * 148) + (2 * 34) + 4 + 4 + input_count;
-				// console.log("transaction in bytes: "+txbytes);
-
-				if(txbytes >= 1000){
-
-				if(coinID == 'bcz'){
-				newfee = parseFloat(txbytes * 10)/100000000;
-				                     document.getElementById("txFee"+coinID).value = newfee;
-									 }
-
-				else if(coinID == 'bzx'){
-				newfee = parseFloat(txbytes * 100)/100000000;
-				                     document.getElementById("txFee"+coinID).value = newfee;
-									 }
-				else if(coinID == 'gxx'){
-				newfee = parseFloat(txbytes * 10)/100000000;
-				                     document.getElementById("txFee"+coinID).value = newfee;
-									 }
+				
+				if(input_count > 499){
+					
+				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
+				$("#walletSendBtnbcz").html("Send").attr('disabled',true);	
 				}
+				else{
+					/*  CALCULATE SIZE OF TRANSACTION  */
+
+					// console.log("total unspents: "+input_count);
+					var newfee;
+					var txbytes = (input_count * 148) + (2 * 34) + 4 + 4 + input_count;
+					// console.log("transaction in bytes: "+txbytes);
+
+					if(txbytes >= 1000){
+
+					if(coinID == 'bcz'){
+					newfee = parseFloat(txbytes * 10)/100000000;
+										 document.getElementById("txFee"+coinID).value = newfee;
+										 }
+
+					else if(coinID == 'bzx'){
+					newfee = parseFloat(txbytes * 100)/100000000;
+										 document.getElementById("txFee"+coinID).value = newfee;
+										 }
+					else if(coinID == 'gxx'){
+					newfee = parseFloat(txbytes * 10)/100000000;
+										 document.getElementById("txFee"+coinID).value = newfee;
+										 }
+					}
 				}
+			}
 			});
 		}
 
