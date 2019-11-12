@@ -1606,7 +1606,7 @@ setCurrentTab(coinID);
 					}
 				} else {
 					
-					$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs.');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs.');
 				}
 			},
 			complete: function(data, status) {
@@ -1621,7 +1621,7 @@ setCurrentTab(coinID);
 				
 				if(input_count > 499){
 					
-				$("#redeemFromStatus").removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
 				//$("#walletSendBtnbcz").html("Send").attr('disabled',true);	
 				}
 				
