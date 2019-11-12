@@ -1622,7 +1622,7 @@ setCurrentTab(coinID);
 				if(input_count > 499){
 					
 				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents to complete a transaction');	
-				//$("#walletSendBtnbcz").html("Send").attr('disabled',true);	
+				$("#walletSendBtn"+coinID).html("X").attr('disabled',true);	
 				}
 				
 					var newfee;
