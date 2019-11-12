@@ -1622,7 +1622,7 @@ setCurrentTab(coinID);
 				else{
 					/*  CALCULATE SIZE OF TRANSACTION  */
 
-					// console.log("total unspents: "+input_count);
+				console.log("total unspents: "+input_count);
 					var newfee;
 					var txbytes = (input_count * 148) + (2 * 34) + 4 + 4 + input_count;
 					// console.log("transaction in bytes: "+txbytes);
