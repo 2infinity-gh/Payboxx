@@ -1619,9 +1619,9 @@ setCurrentTab(coinID);
 
 				console.log("total unspents: "+input_count);
 				
-				if(input_count > 499){
+				if(input_count > 999){
 					
-				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents ( <small>'+input_count+'</small> ) to complete a transaction. <small>( Max allowed: 499 )</small>');	
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has too many unspents ( <small>'+input_count+'</small> ) to complete a transaction. <small>( Max allowed: 999 )</small>');	
 				$("#walletSendBtn"+coinID).html("X").attr('disabled',true);	
 				}
 				
