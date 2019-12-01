@@ -1587,7 +1587,7 @@ setCurrentTab(coinID);
 			url: "https://apixx.ovh/?s="+coinID+"&q=listunspent&a="+redeem.addr,
 			dataType: "json",
 			error: function(data) {
-				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs! (code 2)');
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle"></i> Unexpected error, unable to retrieve unspent outputs! (code 2)');
 			},
 			success: function(data) {
 				if((data.status && data.data) && data.status=='success'){
@@ -1606,11 +1606,11 @@ setCurrentTab(coinID);
 					}
 				} else if((data.status && data.data) && data.status=='no-unspents'){
 					
-					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has no funds or history (code 3)');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle"></i><small> This address has no funds or history (code 3)</small>');
 				}
 				else {
 					
-					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs. (code 1)');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle"></i> Unexpected error, unable to retrieve unspent outputs. (code 1)');
 				}
 			},
 			complete: function(data, status) {
