@@ -1587,7 +1587,7 @@ setCurrentTab(coinID);
 			url: "https://apixx.ovh/?s="+coinID+"&q=listunspent&a="+redeem.addr,
 			dataType: "json",
 			error: function(data) {
-				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs!');
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs! (code 2)');
 			},
 			success: function(data) {
 				if((data.status && data.data) && data.status=='success'){
