@@ -1625,7 +1625,7 @@ setCurrentTab(coinID);
 				
 				if(input_count > 499){
 					
-				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle text-danger"></i><small class="text-info"> This address has too many unspents ( '+input_count+' ) to complete a transaction.( Max allowed: 499 )</small>');	
+				$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle text-danger"></i><small class="text-info"> This address has too many unspents ( '+input_count+' ) to complete a transaction. ( Max allowed: 499 )</small>');	
 				$("#walletSendBtn"+coinID).html("X").attr('disabled',true);	
 				}
 				
