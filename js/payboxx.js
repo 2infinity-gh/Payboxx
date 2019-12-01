@@ -1606,7 +1606,7 @@ setCurrentTab(coinID);
 					}
 				} else if((data.status && data.data) && data.status=='no-unspents'){
 					
-					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has no funds (code 3)');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has no funds or history (code 3)');
 				}
 				else {
 					
