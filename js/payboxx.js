@@ -1606,7 +1606,7 @@ setCurrentTab(coinID);
 					}
 				} else {
 					
-					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs.');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs. (code 1)');
 				}
 			},
 			complete: function(data, status) {
