@@ -1606,7 +1606,7 @@ setCurrentTab(coinID);
 					}
 				} else if((data.status && data.data) && data.status=='no-unspents'){
 					
-					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle red"></i><small> This address has no funds or history.</small>');
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<i class="fas fa-exclamation-triangle text-danger"></i><small class="text-info"> This address has no funds or history.</small>');
 				}
 				else {
 					
