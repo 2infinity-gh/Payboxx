@@ -1604,7 +1604,11 @@ setCurrentTab(coinID);
 							addOutput(tx, n, script, amount);
 						}
 					}
-				} else {
+				} else if((data.status && data.data) && data.status=='no-unspents'){
+					
+					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> This address has no funds (code 3)');
+				}
+				else {
 					
 					$("#redeemFromStatus"+coinID).removeClass('hidden').html('<span class="glyphicon glyphicon-exclamation-sign"></span> Unexpected error, unable to retrieve unspent outputs. (code 1)');
 				}
